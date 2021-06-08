@@ -154,7 +154,7 @@ background-color:rgb(67, 134, 0);
            <item>
             <widget class="QLabel" name="label_2">
              <property name="text">
-              <string>MEMBER LOGIN</string>
+              <string>LOG IN / SIGN UP</string>
              </property>
             </widget>
            </item>
@@ -252,7 +252,11 @@ background-color:rgb(67, 134, 0);
            </spacer>
           </item>
           <item>
-           <widget class="QLineEdit" name="password"/>
+           <widget class="QLineEdit" name="password">
+            <property name="echoMode">
+             <enum>QLineEdit::Password</enum>
+            </property>
+           </widget>
           </item>
          </layout>
         </item>
@@ -280,14 +284,14 @@ background-color:rgb(67, 134, 0);
           <item>
            <widget class="QPushButton" name="login">
             <property name="text">
-             <string>Login</string>
+             <string>LOG IN</string>
             </property>
            </widget>
           </item>
           <item>
            <widget class="QPushButton" name="signup">
             <property name="text">
-             <string>Sign Up</string>
+             <string>SIGN UP</string>
             </property>
            </widget>
           </item>

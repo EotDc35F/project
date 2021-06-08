@@ -5,6 +5,8 @@
 #include "classes.h"
 #include <QList>
 #include <QSettings>
+#include "home.h"
+#include <QMessageBox>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class Dialog; }
@@ -28,7 +30,12 @@ private slots:
     void on_login_clicked();
     void save_to_setting();
 
+
+
+
+
 private:
     Ui::Dialog *ui;
+    home *home;
 };
 #endif // DIALOG_H
