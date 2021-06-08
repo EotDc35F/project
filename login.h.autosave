@@ -1,0 +1,31 @@
+#ifndef DIALOG_H
+#define DIALOG_H
+
+#include <QDialog>
+#include "classes.h"
+#include <QSettings>
+#include <QList>
+
+QT_BEGIN_NAMESPACE
+namespace Ui { class Dialog; }
+QT_END_NAMESPACE
+QList<usr> users;
+
+
+class Dialog : public QDialog
+{
+    Q_OBJECT
+
+public:
+    Dialog(QList<usr>*users,QWidget *parent = nullptr);
+    ~Dialog();
+
+private slots:
+    void on_close_clicked();
+
+    void on_reload_clicked();
+
+private:
+    Ui::Dialog *ui;
+};
+#endif // DIALOG_H
