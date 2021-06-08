@@ -1,6 +1,5 @@
 #ifndef DIALOG_H
 #define DIALOG_H
-
 #include <QDialog>
 #include "classes.h"
 #include <QList>
@@ -28,7 +27,7 @@ private slots:
     void on_reload_clicked();
 
     void on_login_clicked();
-    void save_to_setting();
+
 
 
 
@@ -37,5 +36,6 @@ private slots:
 private:
     Ui::Dialog *ui;
     home *home;
+    void save_to_setting();
 };
 #endif // DIALOG_H

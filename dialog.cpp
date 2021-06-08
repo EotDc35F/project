@@ -6,10 +6,6 @@ Dialog::Dialog(QWidget *parent)
     , ui(new Ui::Dialog)
 {
     ui->setupUi(this);
-//    usr admin;
-//    admin.username="admin";
-//   admin.password="admin";
-//    users.append(admin);
     QSettings user("mot","idk");
     int size=user.beginReadArray("logins");
     for(int i=0;i<size;i++)
@@ -31,6 +27,18 @@ Dialog::~Dialog()
 
 void Dialog::on_signup_clicked()
 {
+    QString u= this->ui->username->text();
+    for(int i=0;i<users.size();i++)
+    {
+       if(users.at(i).username==u  )
+          {
+
+           QMessageBox::critical(this," ","sorry,this username is already taken.");
+           this->ui->username->clear();
+           this->ui->password->clear();
+           return;
+       }
+    }
    usr tmp;
    tmp.username=this->ui->username->text();
    tmp.password=this->ui->password->text();
@@ -55,20 +63,26 @@ void Dialog::on_reload_clicked()
 
 void Dialog::on_login_clicked()
 {
+    bool find=false;
    QString u= this->ui->username->text();
    QString p= this->ui->password->text();
    for(int i=0;i<users.size();i++)
    {
        if(users.at(i).username==u && users.at(i).password==p )
        {
+               find=true;
                home=new class home(this);
                this->hide();
                home->show();
                break;
        }
-      QMessageBox::warning(this,"LOG IN","WRONG");
+   }
+   if(!find)
+     {
 
-
+       QMessageBox::critical(this," ","There was a problem logging in. Check your username and password or create an account.");
+       this->ui->username->clear();
+       this->ui->password->clear();
    }
 }
 
