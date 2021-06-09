@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/close">
+        <file>iconfinder_3671740_close_icon_512px.png</file>
+    </qresource>
+    <qresource prefix="/reload">
+        <file>iconfinder_172536_reload_icon_512px.png</file>
+    </qresource>
+    <qresource prefix="/image">
+        <file>Cinema-Wallpapers-High-Quality-Download-Free.jpg</file>
+    </qresource>
+    <qresource prefix="/new/prefix1"/>
+</RCC>

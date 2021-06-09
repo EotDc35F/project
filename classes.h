@@ -10,3 +10,13 @@ public:
     QString password;
 
 };
+class movie
+{
+    QString director;
+    QString stars;
+    QString release_year;
+    QString language;
+    QString group;
+
+
+};

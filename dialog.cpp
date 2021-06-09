@@ -1,12 +1,12 @@
 #include "dialog.h"
-#include "ui_dialog.h"
+#include "ui_Dialog.h"
 
 Dialog::Dialog(QWidget *parent)
     : QDialog(parent)
     , ui(new Ui::Dialog)
 {
     ui->setupUi(this);
-    QSettings user("mot","idk");
+    QSettings user("mot","prj");
     int size=user.beginReadArray("logins");
     for(int i=0;i<size;i++)
     {
@@ -88,7 +88,7 @@ void Dialog::on_login_clicked()
 
 void Dialog::save_to_setting()
 {
-    QSettings user("mot","idk");
+    QSettings user("mot","prj");
     user.beginWriteArray("logins");
     for(int i=0;i<users.size();i++)
     {

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>591</width>
-    <height>472</height>
+    <width>1022</width>
+    <height>612</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,22 +16,29 @@
   <property name="styleSheet">
    <string notr="true">#main
 {
-border:5px solid black;
+border:5px solid rgb(22, 38, 72);
 border-radius:10px;
 }
 #close:hover
 {
-background-color:red;
+background-color:rgb(177, 0, 0);
 }
 #login:hover
 {
-background-color:rgb(67, 134, 0)
+background-color:rgb(190, 195, 190);
 }
 #signup:hover
 {
-background-color:rgb(67, 134, 0);
+background-color:rgb(190, 195, 190);
 }
-</string>
+#reload:hover
+{
+background-color:rgb(197, 206, 201);
+}
+#Dialog
+{
+background:url(:/image/Cinema-Wallpapers-High-Quality-Download-Free.jpg);
+}</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
@@ -57,8 +64,25 @@ background-color:rgb(67, 134, 0);
          <height>44</height>
         </size>
        </property>
+       <property name="styleSheet">
+        <string notr="true">border:3px white;
+</string>
+       </property>
        <property name="text">
-        <string>reload</string>
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="icon.qrc">
+         <normaloff>:/reload/iconfinder_172536_reload_icon_512px.png</normaloff>:/reload/iconfinder_172536_reload_icon_512px.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="autoDefault">
+        <bool>false</bool>
        </property>
       </widget>
      </item>
@@ -73,8 +97,24 @@ background-color:rgb(67, 134, 0);
          <height>44</height>
         </size>
        </property>
+       <property name="styleSheet">
+        <string notr="true">border:3px white;</string>
+       </property>
        <property name="text">
-        <string>close</string>
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="icon.qrc">
+         <normaloff>:/close/iconfinder_3671740_close_icon_512px.png</normaloff>:/close/iconfinder_3671740_close_icon_512px.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>25</width>
+         <height>25</height>
+        </size>
+       </property>
+       <property name="autoDefault">
+        <bool>false</bool>
        </property>
       </widget>
      </item>
@@ -91,7 +131,7 @@ background-color:rgb(67, 134, 0);
      <property name="sizeHint" stdset="0">
       <size>
        <width>20</width>
-       <height>40</height>
+       <height>110</height>
       </size>
      </property>
     </spacer>
@@ -153,6 +193,10 @@ background-color:rgb(67, 134, 0);
            </item>
            <item>
             <widget class="QLabel" name="label_2">
+             <property name="styleSheet">
+              <string notr="true">
+font: 75 18pt &quot;MS Shell Dlg 2&quot;;</string>
+             </property>
              <property name="text">
               <string>LOG IN / SIGN UP</string>
              </property>
@@ -196,7 +240,27 @@ background-color:rgb(67, 134, 0);
            <number>0</number>
           </property>
           <item>
+           <spacer name="horizontalSpacer_12">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>8</width>
+              <height>8</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
            <widget class="QLabel" name="label_3">
+            <property name="styleSheet">
+             <string notr="true">
+font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
+            </property>
             <property name="text">
              <string>username</string>
             </property>
@@ -212,7 +276,7 @@ background-color:rgb(67, 134, 0);
             </property>
             <property name="sizeHint" stdset="0">
              <size>
-              <width>18</width>
+              <width>30</width>
               <height>20</height>
              </size>
             </property>
@@ -220,6 +284,22 @@ background-color:rgb(67, 134, 0);
           </item>
           <item>
            <widget class="QLineEdit" name="username"/>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_10">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>8</width>
+              <height>8</height>
+             </size>
+            </property>
+           </spacer>
           </item>
          </layout>
         </item>
@@ -229,7 +309,26 @@ background-color:rgb(67, 134, 0);
            <number>0</number>
           </property>
           <item>
+           <spacer name="horizontalSpacer_13">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>8</width>
+              <height>8</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
            <widget class="QLabel" name="label_4">
+            <property name="styleSheet">
+             <string notr="true">font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
+            </property>
             <property name="text">
              <string>password</string>
             </property>
@@ -245,7 +344,7 @@ background-color:rgb(67, 134, 0);
             </property>
             <property name="sizeHint" stdset="0">
              <size>
-              <width>20</width>
+              <width>33</width>
               <height>20</height>
              </size>
             </property>
@@ -257,6 +356,22 @@ background-color:rgb(67, 134, 0);
              <enum>QLineEdit::Password</enum>
             </property>
            </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_11">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>7</width>
+              <height>7</height>
+             </size>
+            </property>
+           </spacer>
           </item>
          </layout>
         </item>
@@ -282,18 +397,62 @@ background-color:rgb(67, 134, 0);
            <number>0</number>
           </property>
           <item>
+           <spacer name="horizontalSpacer_8">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>8</width>
+              <height>8</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
            <widget class="QPushButton" name="login">
+            <property name="styleSheet">
+             <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;</string>
+            </property>
             <property name="text">
              <string>LOG IN</string>
+            </property>
+            <property name="autoDefault">
+             <bool>false</bool>
             </property>
            </widget>
           </item>
           <item>
            <widget class="QPushButton" name="signup">
+            <property name="styleSheet">
+             <string notr="true">font: 75 10pt &quot;MS Shell Dlg 2&quot;;</string>
+            </property>
             <property name="text">
              <string>SIGN UP</string>
             </property>
+            <property name="autoDefault">
+             <bool>false</bool>
+            </property>
            </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_9">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>8</width>
+              <height>8</height>
+             </size>
+            </property>
+           </spacer>
           </item>
          </layout>
         </item>
@@ -318,10 +477,13 @@ background-color:rgb(67, 134, 0);
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Fixed</enum>
+       </property>
        <property name="sizeHint" stdset="0">
         <size>
-         <width>40</width>
-         <height>20</height>
+         <width>5</width>
+         <height>5</height>
         </size>
        </property>
       </spacer>
@@ -343,6 +505,8 @@ background-color:rgb(67, 134, 0);
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="icon.qrc"/>
+ </resources>
  <connections/>
 </ui>
