@@ -1,7 +1,8 @@
 #ifndef HOME_H
 #define HOME_H
-
 #include <QDialog>
+#include "classes.h"
+
 
 namespace Ui {
 class home;
@@ -17,6 +18,8 @@ public:
 
 private:
     Ui::home *ui;
+    QList<mv> movies;
+    void save_to_setting();
 };
 
 #endif // HOME_H

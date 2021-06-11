@@ -1,6 +1,10 @@
 #ifndef CLASSES_H
 #define CLASSES_H
 #include<qstring.h>
+#include <QMessageBox>
+#include <QList>
+#include <QSettings>
+
 
 #endif // CLASSES_H
 class usr
@@ -10,13 +14,16 @@ public:
     QString password;
 
 };
-class movie
-{
+class mv
+{ public:
     QString director;
     QString stars;
     QString release_year;
     QString language;
-    QString group;
+    QString genre;
+    QString name;
+    QString valence;
+    QString imdb;
 
 
 };
