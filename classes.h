@@ -4,6 +4,8 @@
 #include <QMessageBox>
 #include <QList>
 #include <QSettings>
+#include <qtablewidget.h>
+#include <QWidgetItem>
 
 
 #endif // CLASSES_H
