@@ -2,6 +2,7 @@
 #define HOME_H
 #include <QDialog>
 #include "classes.h"
+#include "add.h"
 
 
 namespace Ui {
@@ -20,8 +21,11 @@ private slots:
 
     void on_close_clicked();
 
+    void on_add_clicked();
+
 private:
     Ui::home *ui;
+    Add * add;
     QList<mv> movies;
     QList<QTableWidgetItem*> directors;
     QList<QTableWidgetItem*> qstars;

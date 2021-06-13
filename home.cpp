@@ -14,6 +14,7 @@ home::home(QWidget *parent) :
 home::~home()
 {
     delete ui;
+    destroy_items();
 }
 
 void home::save_to_setting()
@@ -128,5 +129,14 @@ void home::destroy_items()
 void home::on_close_clicked()
 {
     save_to_setting();
+    destroy_items();
     this->close();
+}
+
+void home::on_add_clicked()
+{
+    add = new class Add(this);
+    this->hide();
+    add->setWindowFlags(Qt::Window|Qt::FramelessWindowHint);
+    add->show();
 }
