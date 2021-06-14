@@ -46,6 +46,7 @@ void Dialog::on_signup_clicked()
    save_to_setting();
    home=new class home(this);
    this->hide();
+   home->setWindowFlags(Qt::Window|Qt::FramelessWindowHint);
    home->show();
 
 }
@@ -73,6 +74,7 @@ void Dialog::on_login_clicked()
                find=true;
                home=new class home(this);
                this->hide();
+               home->setWindowFlags(Qt::Window|Qt::FramelessWindowHint);
                home->show();
                break;
        }

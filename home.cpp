@@ -9,12 +9,15 @@ home::home(QWidget *parent) :
     save_to_list();
     load_table( &movies);
 
+
 }
 
 home::~home()
 {
-    delete ui;
+    save_to_setting();
     destroy_items();
+    delete ui;
+
 }
 
 void home::save_to_setting()
@@ -59,6 +62,8 @@ void home::save_to_list()
 
 void home::load_table(QList<mv>*movies)
 {
+    ui->tableWidget->clearContents();
+    destroy_items();
     ui->tableWidget->setRowCount(movies->size());
     for(int i=0;i<movies->size();i++)
     {
@@ -129,13 +134,12 @@ void home::destroy_items()
 void home::on_close_clicked()
 {
     save_to_setting();
-    destroy_items();
     this->close();
 }
 
 void home::on_add_clicked()
 {
-    add = new class Add(this);
+    add = new class Add(0,this,&movies);
     this->hide();
     add->setWindowFlags(Qt::Window|Qt::FramelessWindowHint);
     add->show();

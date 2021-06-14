@@ -40,9 +40,9 @@
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="reload">
+      <widget class="QPushButton" name="close">
        <property name="text">
-        <string>reload</string>
+        <string>close</string>
        </property>
        <property name="autoDefault">
         <bool>false</bool>
@@ -123,7 +123,7 @@
         <number>0</number>
        </property>
        <item row="3" column="1">
-        <widget class="QLineEdit" name="releas"/>
+        <widget class="QLineEdit" name="lreleas"/>
        </item>
        <item row="0" column="0">
         <widget class="QLabel" name="label">
@@ -156,16 +156,16 @@
         </widget>
        </item>
        <item row="5" column="1">
-        <widget class="QLineEdit" name="imdb"/>
+        <widget class="QLineEdit" name="limdb"/>
        </item>
        <item row="2" column="1">
-        <widget class="QLineEdit" name="stars"/>
+        <widget class="QLineEdit" name="lstars"/>
        </item>
        <item row="0" column="1">
-        <widget class="QLineEdit" name="name"/>
+        <widget class="QLineEdit" name="lname"/>
        </item>
        <item row="1" column="1">
-        <widget class="QLineEdit" name="director"/>
+        <widget class="QLineEdit" name="ldirector"/>
        </item>
        <item row="4" column="0">
         <widget class="QLabel" name="label_5">
@@ -178,7 +178,58 @@
         </widget>
        </item>
        <item row="6" column="1">
-        <widget class="QComboBox" name="genre"/>
+        <widget class="QComboBox" name="genre">
+         <item>
+          <property name="text">
+           <string>Drama</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Thriller</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Mystery</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Romance</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Comedy</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Action</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Crime</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>War</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Sci_Fi</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Biography</string>
+          </property>
+         </item>
+        </widget>
        </item>
        <item row="1" column="0">
         <widget class="QLabel" name="label_2">
@@ -211,7 +262,7 @@
         </widget>
        </item>
        <item row="4" column="1">
-        <widget class="QLineEdit" name="language"/>
+        <widget class="QLineEdit" name="llanguage"/>
        </item>
       </layout>
      </item>
@@ -266,6 +317,13 @@
         </size>
        </property>
       </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="cancel">
+       <property name="text">
+        <string>cancel</string>
+       </property>
+      </widget>
      </item>
      <item>
       <widget class="QPushButton" name="add">

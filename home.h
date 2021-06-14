@@ -1,7 +1,6 @@
 #ifndef HOME_H
 #define HOME_H
 #include <QDialog>
-#include "classes.h"
 #include "add.h"
 
 
@@ -16,6 +15,7 @@ class home : public QDialog
 public:
     explicit home(QWidget *parent = nullptr);
     ~home();
+    void load_table(QList<mv>*movies);
 
 private slots:
 
@@ -25,7 +25,7 @@ private slots:
 
 private:
     Ui::home *ui;
-    Add * add;
+  class Add * add;
     QList<mv> movies;
     QList<QTableWidgetItem*> directors;
     QList<QTableWidgetItem*> qstars;
@@ -37,7 +37,6 @@ private:
     QList<QTableWidgetItem*> imdbs;
     void save_to_setting();
     void save_to_list();
-    void load_table(QList<mv>*movies);
     void destroy_items();
 };
 
