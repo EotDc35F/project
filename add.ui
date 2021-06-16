@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>662</width>
+    <width>704</width>
     <height>549</height>
    </rect>
   </property>
@@ -31,8 +31,30 @@
      </item>
      <item>
       <widget class="QPushButton" name="return_2">
+       <property name="minimumSize">
+        <size>
+         <width>50</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="sizeIncrement">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="baseSize">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
        <property name="text">
-        <string>return</string>
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="icon.qrc">
+         <normaloff>:/back/project/iconfinder_4829864_arrow_back_left_icon_512px.png</normaloff>:/back/project/iconfinder_4829864_arrow_back_left_icon_512px.png</iconset>
        </property>
        <property name="autoDefault">
         <bool>false</bool>
@@ -41,8 +63,18 @@
      </item>
      <item>
       <widget class="QPushButton" name="close">
+       <property name="minimumSize">
+        <size>
+         <width>50</width>
+         <height>50</height>
+        </size>
+       </property>
        <property name="text">
-        <string>close</string>
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="icon.qrc">
+         <normaloff>:/close/iconfinder_3671740_close_icon_512px.png</normaloff>:/close/iconfinder_3671740_close_icon_512px.png</iconset>
        </property>
        <property name="autoDefault">
         <bool>false</bool>
@@ -75,7 +107,7 @@
      <item>
       <widget class="QLabel" name="label_8">
        <property name="text">
-        <string> please compelete the movie information</string>
+        <string> please complete the movie information</string>
        </property>
        <property name="margin">
         <number>5</number>
@@ -122,13 +154,58 @@
        <property name="bottomMargin">
         <number>0</number>
        </property>
+       <item row="5" column="0">
+        <widget class="QLabel" name="label_6">
+         <property name="text">
+          <string>imdb</string>
+         </property>
+         <property name="margin">
+          <number>5</number>
+         </property>
+        </widget>
+       </item>
        <item row="3" column="1">
         <widget class="QLineEdit" name="lreleas"/>
+       </item>
+       <item row="4" column="1">
+        <widget class="QLineEdit" name="llanguage"/>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="ldirector"/>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLineEdit" name="lstars"/>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_3">
+         <property name="text">
+          <string>stars</string>
+         </property>
+         <property name="margin">
+          <number>5</number>
+         </property>
+        </widget>
        </item>
        <item row="0" column="0">
         <widget class="QLabel" name="label">
          <property name="text">
           <string>name</string>
+         </property>
+         <property name="margin">
+          <number>5</number>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="lname"/>
+       </item>
+       <item row="5" column="1">
+        <widget class="QLineEdit" name="limdb"/>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="label_4">
+         <property name="text">
+          <string>releade date</string>
          </property>
          <property name="margin">
           <number>5</number>
@@ -145,27 +222,15 @@
          </property>
         </widget>
        </item>
-       <item row="5" column="0">
-        <widget class="QLabel" name="label_6">
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_2">
          <property name="text">
-          <string>imdb</string>
+          <string>director</string>
          </property>
          <property name="margin">
           <number>5</number>
          </property>
         </widget>
-       </item>
-       <item row="5" column="1">
-        <widget class="QLineEdit" name="limdb"/>
-       </item>
-       <item row="2" column="1">
-        <widget class="QLineEdit" name="lstars"/>
-       </item>
-       <item row="0" column="1">
-        <widget class="QLineEdit" name="lname"/>
-       </item>
-       <item row="1" column="1">
-        <widget class="QLineEdit" name="ldirector"/>
        </item>
        <item row="4" column="0">
         <widget class="QLabel" name="label_5">
@@ -178,91 +243,80 @@
         </widget>
        </item>
        <item row="6" column="1">
-        <widget class="QComboBox" name="genre">
-         <item>
-          <property name="text">
-           <string>Drama</string>
-          </property>
+        <layout class="QGridLayout" name="gridLayout_6">
+         <item row="1" column="1">
+          <widget class="QCheckBox" name="checkBox_5">
+           <property name="text">
+            <string>Action</string>
+           </property>
+          </widget>
          </item>
-         <item>
-          <property name="text">
-           <string>Thriller</string>
-          </property>
+         <item row="1" column="0">
+          <widget class="QCheckBox" name="checkBox_4">
+           <property name="text">
+            <string>Comedy</string>
+           </property>
+          </widget>
          </item>
-         <item>
-          <property name="text">
-           <string>Mystery</string>
-          </property>
+         <item row="0" column="2">
+          <widget class="QCheckBox" name="checkBox">
+           <property name="text">
+            <string>Romance</string>
+           </property>
+          </widget>
          </item>
-         <item>
-          <property name="text">
-           <string>Romance</string>
-          </property>
+         <item row="0" column="0">
+          <widget class="QCheckBox" name="checkBox_3">
+           <property name="text">
+            <string>Drama</string>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+           <property name="tristate">
+            <bool>false</bool>
+           </property>
+          </widget>
          </item>
-         <item>
-          <property name="text">
-           <string>Comedy</string>
-          </property>
+         <item row="0" column="1">
+          <widget class="QCheckBox" name="checkBox_2">
+           <property name="text">
+            <string>Mystery</string>
+           </property>
+          </widget>
          </item>
-         <item>
-          <property name="text">
-           <string>Action</string>
-          </property>
+         <item row="1" column="2">
+          <widget class="QCheckBox" name="checkBox_6">
+           <property name="text">
+            <string>Crime</string>
+           </property>
+          </widget>
          </item>
-         <item>
-          <property name="text">
-           <string>Crime</string>
-          </property>
+         <item row="2" column="0">
+          <widget class="QCheckBox" name="checkBox_7">
+           <property name="text">
+            <string>Sci_Fi</string>
+           </property>
+          </widget>
          </item>
-         <item>
-          <property name="text">
-           <string>War</string>
-          </property>
+         <item row="2" column="1">
+          <widget class="QCheckBox" name="checkBox_8">
+           <property name="text">
+            <string>War</string>
+           </property>
+          </widget>
          </item>
-         <item>
-          <property name="text">
-           <string>Sci_Fi</string>
-          </property>
+         <item row="2" column="2">
+          <widget class="QCheckBox" name="checkBox_9">
+           <property name="text">
+            <string>Thriller</string>
+           </property>
+          </widget>
          </item>
-         <item>
-          <property name="text">
-           <string>Biography</string>
-          </property>
-         </item>
-        </widget>
-       </item>
-       <item row="1" column="0">
-        <widget class="QLabel" name="label_2">
-         <property name="text">
-          <string>director</string>
-         </property>
-         <property name="margin">
-          <number>5</number>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="0">
-        <widget class="QLabel" name="label_3">
-         <property name="text">
-          <string>stars</string>
-         </property>
-         <property name="margin">
-          <number>5</number>
-         </property>
-        </widget>
-       </item>
-       <item row="3" column="0">
-        <widget class="QLabel" name="label_4">
-         <property name="text">
-          <string>releade date</string>
-         </property>
-         <property name="margin">
-          <number>5</number>
-         </property>
-        </widget>
-       </item>
-       <item row="4" column="1">
-        <widget class="QLineEdit" name="llanguage"/>
+        </layout>
        </item>
       </layout>
      </item>
@@ -283,22 +337,6 @@
       </spacer>
      </item>
     </layout>
-   </item>
-   <item>
-    <spacer name="verticalSpacer_3">
-     <property name="orientation">
-      <enum>Qt::Vertical</enum>
-     </property>
-     <property name="sizeType">
-      <enum>QSizePolicy::Fixed</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>20</width>
-       <height>3</height>
-      </size>
-     </property>
-    </spacer>
    </item>
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout_5">
@@ -322,6 +360,9 @@
       <widget class="QPushButton" name="cancel">
        <property name="text">
         <string>cancel</string>
+       </property>
+       <property name="autoDefault">
+        <bool>false</bool>
        </property>
       </widget>
      </item>
@@ -368,6 +409,8 @@
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="icon.qrc"/>
+ </resources>
  <connections/>
 </ui>

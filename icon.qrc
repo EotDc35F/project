@@ -9,4 +9,8 @@
         <file>Cinema-Wallpapers-High-Quality-Download-Free.jpg</file>
     </qresource>
     <qresource prefix="/new/prefix1"/>
+    <qresource prefix="/back">
+        <file>project/iconfinder_216437_back_arrow_icon_512px.png</file>
+        <file>project/iconfinder_4829864_arrow_back_left_icon_512px.png</file>
+    </qresource>
 </RCC>

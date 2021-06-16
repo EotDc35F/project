@@ -8,8 +8,6 @@ home::home(QWidget *parent) :
     ui->setupUi(this);
     save_to_list();
     load_table( &movies);
-
-
 }
 
 home::~home()
@@ -42,6 +40,7 @@ void home::save_to_setting()
 void home::save_to_list()
 {
     QSettings movie("mot","prj");
+
     int size=movie.beginReadArray("movie");
     for(int i=0;i<size;i++)
     {
@@ -62,24 +61,26 @@ void home::save_to_list()
 
 void home::load_table(QList<mv>*movies)
 {
-    ui->tableWidget->clearContents();
     destroy_items();
+    ui->tableWidget->clearContents();
     ui->tableWidget->setRowCount(movies->size());
     for(int i=0;i<movies->size();i++)
     {
-        QTableWidgetItem* director = nullptr;new QTableWidgetItem;
-        QTableWidgetItem* stars = nullptr;new QTableWidgetItem;
-        QTableWidgetItem*release_year = nullptr;new QTableWidgetItem;
-        QTableWidgetItem* language = nullptr;new QTableWidgetItem;
-        QTableWidgetItem* genre = nullptr;new QTableWidgetItem;
-        QTableWidgetItem* name = nullptr;new QTableWidgetItem;
-        QTableWidgetItem*valence = nullptr;new QTableWidgetItem;
-        QTableWidgetItem* imdb = nullptr;new QTableWidgetItem;
+        QTableWidgetItem* director =new QTableWidgetItem;
+        QTableWidgetItem* stars = new QTableWidgetItem;
+        QTableWidgetItem*release_year =new QTableWidgetItem;
+        QTableWidgetItem* language = new QTableWidgetItem;
+        QTableWidgetItem* genre = new QTableWidgetItem;
+        QTableWidgetItem* name = new QTableWidgetItem;
+        QTableWidgetItem*valence =new QTableWidgetItem;
+        QTableWidgetItem* imdb = new QTableWidgetItem;
         director->setText(movies->at(i).director);
+
         stars->setText(movies->at(i).stars);
         release_year->setText(movies->at(i).release_year);
         language->setText(movies->at(i).language);
         genre->setText(movies->at(i).genre);
+
         name->setText(movies->at(i).name);
         valence->setText(movies->at(i).valence);
         imdb->setText(movies->at(i).imdb);
@@ -109,6 +110,8 @@ void home::destroy_items()
 {
     for(int i=0;i<names.size();i++)
     {
+
+
         delete names[i];
         delete languages[i];
         delete directors[i];
@@ -137,10 +140,88 @@ void home::on_close_clicked()
     this->close();
 }
 
+
+
 void home::on_add_clicked()
 {
-    add = new class Add(0,this,&movies);
-    this->hide();
-    add->setWindowFlags(Qt::Window|Qt::FramelessWindowHint);
-    add->show();
+    add=new Add(this,&movies,this);
+       this->hide();
+        add->setWindowFlags(Qt::Window|Qt::FramelessWindowHint);
+       add->show();
+}
+
+void home::on_edit_clicked()
+{  QString name=this->ui->ledit->text();
+    bool find=false;
+    int index=0;
+    for(int i=0;i<movies.size();i++)
+    {
+        if(movies.at(i).name==name)
+        {
+          find=true;
+           index=i;
+           break;
+        }
+    }
+    if(!find)
+       {
+        QMessageBox::warning(this,"Edit","There is no movie with this name!\nPlease try again");
+        ui->ledit->clear();
+        return;
+}
+   edit=new class edit(this,&movies,this,&name,index);
+    ui->ledit->clear();
+   this->hide();
+   edit->setWindowFlags(Qt::Window|Qt::FramelessWindowHint);
+   edit->show();
+}
+
+
+void home::on_back_clicked()
+{
+    load_table(&movies);
+}
+
+void home::on_remove_clicked()
+{    bool find=false;
+    QString r=this->ui->lremove->text();
+    for(int i=0;i<movies.size();i++)
+    {
+        if(movies.at(i).name==r)
+        {
+            movies.removeAt(i);
+            QMessageBox::information(this,"Remove","Successfully removed");
+            load_table(&movies);
+            find=true;
+            break;
+        }
+    }
+     if(!find)
+     {
+         QMessageBox::warning(this,"Remove","There is no movie with this name!\nPlease try again");
+         this->ui->lremove->clear();
+     }
+}
+
+void home::on_comboBox_currentTextChanged(const QString &arg1)
+{
+    if(arg1=="All")
+       {
+        load_table(&movies);
+        return;
+    }
+    QList<mv> nmovies;
+    for(int i=0;i<movies.size();i++)
+    {
+      if(movies.at(i).genre.contains(arg1))
+      {
+          nmovies.append(movies.at(i));
+      }
+    }
+    load_table(&nmovies);
+}
+
+void home::on_pushButton_clicked()
+{
+    ui->lremove->clear();
 }

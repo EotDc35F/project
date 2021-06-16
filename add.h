@@ -2,6 +2,10 @@
 #define ADD_H
 #include <QDialog>
 #include "classes.h"
+#include "home.h"
+#include <QObjectList>
+
+
 
 
 namespace Ui {
@@ -13,14 +17,14 @@ class Add : public QDialog
     Q_OBJECT
 
 public:
-    explicit Add(QWidget *parent = nullptr,QDialog *qd=nullptr,QList<mv>*movies=nullptr);
+    explicit Add(QWidget *parent = nullptr,QList<mv>*movies=0,class home*hm=nullptr);
     ~Add();
 
 private slots:
 
     void on_return_2_clicked();
 
-    void on_cancel_clicked();
+   void on_cancel_clicked();
 
     void on_close_clicked();
 
@@ -28,9 +32,9 @@ private slots:
 
 private:
     Ui::Add *ui;
-    QDialog * hm;
+
     QList<mv>*movies;
-    QDialog* rhome;
+home *home;
 
 
 };

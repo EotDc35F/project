@@ -60,8 +60,8 @@ background:url(:/image/Cinema-Wallpapers-High-Quality-Download-Free.jpg);
       <widget class="QPushButton" name="reload">
        <property name="minimumSize">
         <size>
-         <width>44</width>
-         <height>44</height>
+         <width>50</width>
+         <height>50</height>
         </size>
        </property>
        <property name="styleSheet">
@@ -93,8 +93,8 @@ background:url(:/image/Cinema-Wallpapers-High-Quality-Download-Free.jpg);
        </property>
        <property name="minimumSize">
         <size>
-         <width>44</width>
-         <height>44</height>
+         <width>50</width>
+         <height>50</height>
         </size>
        </property>
        <property name="styleSheet">

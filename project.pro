@@ -11,19 +11,25 @@ CONFIG += c++11
 SOURCES += \
     add.cpp \
     dialog.cpp \
+    edit.cpp \
     home.cpp \
-    main.cpp
+    main.cpp \
+    reserve.cpp
 
 HEADERS += \
     add.h \
     classes.h \
     dialog.h \
-    home.h
+    edit.h \
+    home.h \
+    reserve.h
 
 FORMS += \
     add.ui \
     dialog.ui \
-    home.ui
+    edit.ui \
+    home.ui \
+    reserve.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -31,5 +37,4 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 RESOURCES += \
-    icon.qrc \
     icon.qrc
