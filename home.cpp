@@ -177,11 +177,6 @@ void home::on_edit_clicked()
 }
 
 
-void home::on_back_clicked()
-{
-    load_table(&movies);
-}
-
 void home::on_remove_clicked()
 {    bool find=false;
     QString r=this->ui->lremove->text();
@@ -225,3 +220,60 @@ void home::on_pushButton_clicked()
 {
     ui->lremove->clear();
 }
+
+void home::on_lineEdit_textChanged(const QString &arg1)
+{   if(arg1=="")
+    {
+        load_table(&movies);
+        return;
+    }
+    QList<mv> nmovies;
+    for(int i=0;i<movies.size();i++)
+    {
+        if(movies.at(i).name.startsWith(arg1,Qt::CaseInsensitive))
+        {
+            nmovies.append(movies.at(i));
+            continue;
+        }
+        if(movies.at(i).director.startsWith(arg1,Qt::CaseInsensitive))
+        {
+            nmovies.append(movies.at(i));
+            continue;
+        }
+        if(movies.at(i).stars.contains(arg1))
+        {
+            nmovies.append(movies.at(i));
+            continue;
+        }
+        if(movies.at(i).language.startsWith(arg1,Qt::CaseInsensitive))
+        {
+            nmovies.append(movies.at(i));
+            continue;
+        }
+        if(movies.at(i).release_year.startsWith(arg1,Qt::CaseInsensitive))
+        {
+            nmovies.append(movies.at(i));
+            continue;
+        }
+        if(movies.at(i).genre.contains(arg1,Qt::CaseInsensitive))
+        {
+            nmovies.append(movies.at(i));
+            continue;
+        }
+        if(movies.at(i).imdb.startsWith(arg1,Qt::CaseInsensitive))
+        {
+            nmovies.append(movies.at(i));
+            continue;
+        }
+    }
+    load_table(&nmovies);
+}
+void home::mousePressEvent(QMouseEvent *event) {
+    m_nMouseClick_X_Coordinate = event->x();
+    m_nMouseClick_Y_Coordinate = event->y();
+}
+
+void home::mouseMoveEvent(QMouseEvent *event) {
+    move(event->globalX()-m_nMouseClick_X_Coordinate,event->globalY()-m_nMouseClick_Y_Coordinate);
+}
+

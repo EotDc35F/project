@@ -17,6 +17,7 @@ public:
 
 private:
     Ui::reserve *ui;
+
 };
 
 #endif // RESERVE_H

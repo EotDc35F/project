@@ -27,13 +27,13 @@ private slots:
 
     void on_edit_clicked();
 
-    void on_back_clicked();
-
     void on_remove_clicked();
 
     void on_comboBox_currentTextChanged(const QString &arg1);
 
     void on_pushButton_clicked();
+
+    void on_lineEdit_textChanged(const QString &arg1);
 
 private:
     Ui::home *ui;
@@ -51,6 +51,10 @@ private:
     void save_to_setting();
     void save_to_list();
     void destroy_items();
+    void mousePressEvent(QMouseEvent *event);
+        void mouseMoveEvent(QMouseEvent *event);
+        int m_nMouseClick_X_Coordinate;
+        int m_nMouseClick_Y_Coordinate;
     
 };
 
