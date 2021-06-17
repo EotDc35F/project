@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/close">
+        <file>iconfinder_3671740_close_icon_512px.png</file>
+    </qresource>
+    <qresource prefix="/relod">
+        <file>iconfinder_172536_reload_icon_512px.png</file>
+    </qresource>
+    <qresource prefix="/back">
+        <file>iconfinder_4829864_arrow_back_left_icon_512px.png</file>
+    </qresource>
+    <qresource prefix="/image">
+        <file>Cinema-Wallpapers-High-Quality-Download-Free.jpg</file>
+    </qresource>
+</RCC>
