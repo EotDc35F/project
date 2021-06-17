@@ -72,8 +72,8 @@ background:url(:/image/Cinema-Wallpapers-High-Quality-Download-Free.jpg);
         <string/>
        </property>
        <property name="icon">
-        <iconset resource="icon.qrc">
-         <normaloff>:/reload/iconfinder_172536_reload_icon_512px.png</normaloff>:/reload/iconfinder_172536_reload_icon_512px.png</iconset>
+        <iconset resource="icons.qrc">
+         <normaloff>:/relod/iconfinder_172536_reload_icon_512px.png</normaloff>:/relod/iconfinder_172536_reload_icon_512px.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -104,7 +104,7 @@ background:url(:/image/Cinema-Wallpapers-High-Quality-Download-Free.jpg);
         <string/>
        </property>
        <property name="icon">
-        <iconset resource="icon.qrc">
+        <iconset resource="icons.qrc">
          <normaloff>:/close/iconfinder_3671740_close_icon_512px.png</normaloff>:/close/iconfinder_3671740_close_icon_512px.png</iconset>
        </property>
        <property name="iconSize">
@@ -506,7 +506,7 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
   </layout>
  </widget>
  <resources>
-  <include location="icon.qrc"/>
+  <include location="icons.qrc"/>
  </resources>
  <connections/>
 </ui>
