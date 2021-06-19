@@ -3,6 +3,7 @@
 #include <QDialog>
 #include "add.h"
 #include"edit.h"
+#include"reserve.h"
 
 
 
@@ -37,12 +38,13 @@ private slots:
 
     void on_lineEdit_textChanged(const QString &arg1);
 
-//    void on_reserve_clicked();
+    void on_reserve_clicked();
 
 private:
     Ui::home *ui;
    class Add * add;
    class edit * edit;
+   class reserve*reserve;
     QList<mv> movies;
     QList<QTableWidgetItem*> directors;
     QList<QTableWidgetItem*> qstars;

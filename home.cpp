@@ -272,10 +272,10 @@ void home::on_lineEdit_textChanged(const QString &arg1)
 
 
 
-//void home::on_reserve_clicked()
-//{
-//    reserve=new class reserve(this,&movies);
-//       this->hide();
-//        add->setWindowFlags(Qt::Window|Qt::FramelessWindowHint);
-//       add->show();
-//}
+void home::on_reserve_clicked()
+{
+    reserve=new class reserve(this,&movies);
+       this->hide();
+        reserve->setWindowFlags(Qt::Window|Qt::FramelessWindowHint);
+       reserve->show();
+}

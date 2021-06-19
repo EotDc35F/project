@@ -16,9 +16,21 @@ public:
     explicit reserve(QWidget *parent = nullptr,QList<mv>*movies=0);
     ~reserve();
 
+private slots:
+    void on_close_clicked();
+
+    void on_back_clicked();
+
+    void on_cancel_clicked();
+    void on_reserve_2_clicked();
+
 private:
     Ui::reserve *ui;
     QList<mv>*movies;
+    void load_table();
+    void destroy_items();
+    QList<QTableWidgetItem*> names;
+    QList<QTableWidgetItem*> valences;
 
 };
 
