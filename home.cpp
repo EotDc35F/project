@@ -268,12 +268,14 @@ void home::on_lineEdit_textChanged(const QString &arg1)
     }
     load_table(&nmovies);
 }
-void home::mousePressEvent(QMouseEvent *event) {
-    m_nMouseClick_X_Coordinate = event->x();
-    m_nMouseClick_Y_Coordinate = event->y();
-}
 
-void home::mouseMoveEvent(QMouseEvent *event) {
-    move(event->globalX()-m_nMouseClick_X_Coordinate,event->globalY()-m_nMouseClick_Y_Coordinate);
-}
 
+
+
+//void home::on_reserve_clicked()
+//{
+//    reserve=new class reserve(this,&movies);
+//       this->hide();
+//        add->setWindowFlags(Qt::Window|Qt::FramelessWindowHint);
+//       add->show();
+//}

@@ -1,7 +1,7 @@
 #ifndef ADD_H
 #define ADD_H
 #include <QDialog>
-#include "classes.h"
+#include"classes.h"
 #include "home.h"
 #include <QObjectList>
 

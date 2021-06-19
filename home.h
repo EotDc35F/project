@@ -5,6 +5,8 @@
 #include"edit.h"
 
 
+
+
 namespace Ui {
 class home;
 }
@@ -35,10 +37,12 @@ private slots:
 
     void on_lineEdit_textChanged(const QString &arg1);
 
+//    void on_reserve_clicked();
+
 private:
     Ui::home *ui;
    class Add * add;
-     class edit * edit;
+   class edit * edit;
     QList<mv> movies;
     QList<QTableWidgetItem*> directors;
     QList<QTableWidgetItem*> qstars;
@@ -51,10 +55,7 @@ private:
     void save_to_setting();
     void save_to_list();
     void destroy_items();
-    void mousePressEvent(QMouseEvent *event);
-        void mouseMoveEvent(QMouseEvent *event);
-        int m_nMouseClick_X_Coordinate;
-        int m_nMouseClick_Y_Coordinate;
+
     
 };
 
