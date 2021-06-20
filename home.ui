@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1393</width>
-    <height>581</height>
+    <width>1383</width>
+    <height>604</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -133,11 +133,15 @@
             <pointsize>10</pointsize>
             <weight>50</weight>
             <bold>false</bold>
+            <stylestrategy>PreferAntialias</stylestrategy>
             <kerning>true</kerning>
            </font>
           </property>
           <property name="mouseTracking">
            <bool>false</bool>
+          </property>
+          <property name="contextMenuPolicy">
+           <enum>Qt::NoContextMenu</enum>
           </property>
           <property name="toolTip">
            <string/>
@@ -147,6 +151,12 @@
           </property>
           <property name="autoFillBackground">
            <bool>false</bool>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">text-align: center; </string>
+          </property>
+          <property name="inputMethodHints">
+           <set>Qt::ImhNone</set>
           </property>
           <property name="frameShadow">
            <enum>QFrame::Sunken</enum>
@@ -163,13 +173,25 @@
           <property name="editTriggers">
            <set>QAbstractItemView::NoEditTriggers</set>
           </property>
+          <property name="selectionMode">
+           <enum>QAbstractItemView::NoSelection</enum>
+          </property>
           <property name="textElideMode">
            <enum>Qt::ElideMiddle</enum>
+          </property>
+          <property name="verticalScrollMode">
+           <enum>QAbstractItemView::ScrollPerItem</enum>
           </property>
           <property name="showGrid">
            <bool>true</bool>
           </property>
           <property name="sortingEnabled">
+           <bool>true</bool>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+          <property name="cornerButtonEnabled">
            <bool>true</bool>
           </property>
           <attribute name="horizontalHeaderCascadingSectionResizes">
@@ -178,11 +200,14 @@
           <attribute name="horizontalHeaderMinimumSectionSize">
            <number>46</number>
           </attribute>
+          <attribute name="horizontalHeaderDefaultSectionSize">
+           <number>140</number>
+          </attribute>
           <attribute name="horizontalHeaderHighlightSections">
            <bool>false</bool>
           </attribute>
           <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
-           <bool>false</bool>
+           <bool>true</bool>
           </attribute>
           <attribute name="horizontalHeaderStretchLastSection">
            <bool>false</bool>
@@ -194,7 +219,7 @@
            <number>37</number>
           </attribute>
           <attribute name="verticalHeaderDefaultSectionSize">
-           <number>37</number>
+           <number>100</number>
           </attribute>
           <attribute name="verticalHeaderHighlightSections">
            <bool>false</bool>
@@ -311,7 +336,7 @@
        </property>
        <property name="sizeHint" stdset="0">
         <size>
-         <width>80</width>
+         <width>60</width>
          <height>20</height>
         </size>
        </property>
@@ -626,6 +651,22 @@
         </item>
        </layout>
       </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_3">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Fixed</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>10</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
      </item>
     </layout>
    </item>

@@ -2,6 +2,8 @@
 #define DIALOG_H
 #include <QDialog>
 #include "home.h"
+#include"forget.h"
+#include"signup.h"
 
 
 QT_BEGIN_NAMESPACE
@@ -30,11 +32,15 @@ private slots:
 
 
 
+    void on_commandLinkButton_clicked();
+
 private:
     Ui::Dialog *ui;
     QList<usr> users;
     home *home;
-    void save_to_setting();
+    class forget* forget;
+    class signup*signup;
+    void save_to_list();
     void mousePressEvent(QMouseEvent *event);
         void mouseMoveEvent(QMouseEvent *event);
         int m_nMouseClick_X_Coordinate;

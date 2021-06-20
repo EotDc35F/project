@@ -1,13 +1,14 @@
 #include "reserve.h"
 #include "ui_reserve.h"
 
-reserve::reserve(QWidget *parent,QList<mv>*mv) :
+reserve::reserve(QWidget *parent,QList<mv>*mv, class home*hm) :
     QDialog(parent),
     ui(new Ui::reserve)
 {
     ui->setupUi(this);
     this->movies=mv;
     load_table();
+    this->home=hm;
 }
 
 reserve::~reserve()
@@ -37,7 +38,9 @@ void reserve::load_table()
         QTableWidgetItem*valence =new QTableWidgetItem;
 
         name->setText(movies->at(i).name);
+         name->setTextAlignment(Qt::AlignCenter);
         valence->setText(movies->at(i).valence);
+         valence->setTextAlignment(Qt::AlignCenter);
         ui->tableWidget->setItem(i,0,name);
         ui->tableWidget->setItem(i,1,valence);
         names.append(name);
@@ -95,6 +98,7 @@ void reserve::on_reserve_2_clicked()
             this->ui->lname->clear();
            this->ui->number->setValue(0);
              load_table();
+            home->load_table(movies);
 
         }
         else

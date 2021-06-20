@@ -74,16 +74,22 @@ void home::load_table(QList<mv>*movies)
         QTableWidgetItem* name = new QTableWidgetItem;
         QTableWidgetItem*valence =new QTableWidgetItem;
         QTableWidgetItem* imdb = new QTableWidgetItem;
+        director->setTextAlignment(Qt::AlignCenter);
         director->setText(movies->at(i).director);
-
         stars->setText(movies->at(i).stars);
+        stars->setTextAlignment(Qt::AlignCenter);
         release_year->setText(movies->at(i).release_year);
+         release_year->setTextAlignment(Qt::AlignCenter);
         language->setText(movies->at(i).language);
+         language->setTextAlignment(Qt::AlignCenter);
         genre->setText(movies->at(i).genre);
-
+         genre->setTextAlignment(Qt::AlignCenter);
         name->setText(movies->at(i).name);
+         name->setTextAlignment(Qt::AlignCenter);
         valence->setText(movies->at(i).valence);
+         valence->setTextAlignment(Qt::AlignCenter);
         imdb->setText(movies->at(i).imdb);
+        imdb->setTextAlignment(Qt::AlignCenter);
         ui->tableWidget->setItem(i,0,name);
         ui->tableWidget->setItem(i,1,director);
         ui->tableWidget->setItem(i,2,stars);
@@ -274,7 +280,7 @@ void home::on_lineEdit_textChanged(const QString &arg1)
 
 void home::on_reserve_clicked()
 {
-    reserve=new class reserve(this,&movies);
+    reserve=new class reserve(this,&movies,this);
        this->hide();
         reserve->setWindowFlags(Qt::Window|Qt::FramelessWindowHint);
        reserve->show();

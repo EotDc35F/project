@@ -6,17 +6,8 @@ Dialog::Dialog(QWidget *parent)
     , ui(new Ui::Dialog)
 {
     ui->setupUi(this);
-    QSettings user("mot","prj");
-    int size=user.beginReadArray("logins");
-    for(int i=0;i<size;i++)
-    {
-        usr tp;
-        user.setArrayIndex(i);
-        tp.username=user.value("username").toString();
-        tp.password=user.value("password").toString();
-        users.append(tp);
-    }
-    user.endArray();
+    save_to_list();
+
 }
 
 Dialog::~Dialog()
@@ -27,27 +18,31 @@ Dialog::~Dialog()
 
 void Dialog::on_signup_clicked()
 {
-    QString u= this->ui->username->text();
-    for(int i=0;i<users.size();i++)
-    {
-       if(users.at(i).username==u  )
-          {
+    signup=new class signup(this,&users);
+    signup->setWindowFlags(Qt::Window|Qt::FramelessWindowHint);
+    this->hide();
+    signup->show();
+//    QString u= this->ui->username->text();
+//    for(int i=0;i<users.size();i++)
+//    {
+//       if(users.at(i).username==u  )
+//          {
 
-           QMessageBox::critical(this," ","sorry,this username is already taken.");
-           this->ui->username->clear();
-           this->ui->password->clear();
-           return;
-       }
-    }
-   usr tmp;
-   tmp.username=this->ui->username->text();
-   tmp.password=this->ui->password->text();
-   users.append(tmp);
-   save_to_setting();
-   home=new class home(this);
-   this->hide();
-   home->setWindowFlags(Qt::Window|Qt::FramelessWindowHint);
-   home->show();
+//           QMessageBox::critical(this," ","sorry,this username is already taken.");
+//           this->ui->username->clear();
+//           this->ui->password->clear();
+//           return;
+//       }
+//    }
+//   usr tmp;
+//   tmp.username=this->ui->username->text();
+//   tmp.password=this->ui->password->text();
+//   users.append(tmp);
+//   save_to_setting();
+//   home=new class home(this);
+//   this->hide();
+//   home->setWindowFlags(Qt::Window|Qt::FramelessWindowHint);
+//   home->show();
 
 }
 
@@ -88,19 +83,6 @@ void Dialog::on_login_clicked()
    }
 }
 
-void Dialog::save_to_setting()
-{
-    QSettings user("mot","prj");
-    user.beginWriteArray("logins");
-    for(int i=0;i<users.size();i++)
-    {
-        user.setArrayIndex(i);
-        user.setValue("username",users.at(i).username);
-        user.setValue("password",users.at(i).password);
-    }
-    user.endArray();
-
-}
 void Dialog::mousePressEvent(QMouseEvent *event) {
     m_nMouseClick_X_Coordinate = event->x();
     m_nMouseClick_Y_Coordinate = event->y();
@@ -114,3 +96,26 @@ void Dialog::mouseMoveEvent(QMouseEvent *event) {
 
 
 
+
+void Dialog::on_commandLinkButton_clicked()
+{
+   forget=new class forget(this,&users);
+    forget->setWindowFlags(Qt::Window|Qt::FramelessWindowHint);
+   this->hide();
+    forget->show();
+}
+
+void Dialog::save_to_list()
+{
+    QSettings user("mot","prj");
+    int size=user.beginReadArray("logins");
+    for(int i=0;i<size;i++)
+    {
+        usr tp;
+        user.setArrayIndex(i);
+        tp.username=user.value("username").toString();
+        tp.password=user.value("password").toString();
+        users.append(tp);
+    }
+    user.endArray();
+}

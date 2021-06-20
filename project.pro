@@ -12,24 +12,30 @@ SOURCES += \
     add.cpp \
     dialog.cpp \
     edit.cpp \
+    forget.cpp \
     home.cpp \
     main.cpp \
-    reserve.cpp
+    reserve.cpp \
+    signup.cpp
 
 HEADERS += \
     add.h \
     classes.h \
     dialog.h \
     edit.h \
+    forget.h \
     home.h \
-    reserve.h
+    reserve.h \
+    signup.h
 
 FORMS += \
     add.ui \
     dialog.ui \
     edit.ui \
+    forget.ui \
     home.ui \
-    reserve.ui
+    reserve.ui \
+    signup.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
