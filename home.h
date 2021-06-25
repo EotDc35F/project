@@ -20,6 +20,9 @@ public:
     explicit home(QWidget *parent = nullptr);
     ~home();
     void load_table(QList<mv>*movies);
+    void comb_g(QString s);
+
+
 
 
 
@@ -31,9 +34,7 @@ private slots:
     void on_edit_clicked();
 
     void on_remove_clicked();
-
-    void on_comboBox_currentTextChanged(const QString &arg1);
-
+ void on_comboBox_currentTextChanged(const QString &arg1);
     void on_pushButton_clicked();
 
     void on_lineEdit_textChanged(const QString &arg1);

@@ -17,7 +17,7 @@ class Add : public QDialog
     Q_OBJECT
 
 public:
-    explicit Add(QWidget *parent = nullptr,QList<mv>*movies=0,class home*hm=nullptr);
+    explicit Add(QWidget *parent = nullptr,QList<mv>*movies=0,class home*hm=nullptr,QString *comb_g=nullptr);
     ~Add();
 
 private slots:
@@ -30,9 +30,11 @@ private slots:
 
     void on_add_clicked();
 
+    void on_back_clicked();
+
 private:
     Ui::Add *ui;
-
+    QString *combo_g;
     QList<mv>*movies;
     home *home;
     void mousePressEvent(QMouseEvent *event);

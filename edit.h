@@ -14,7 +14,7 @@ class edit : public QDialog
     Q_OBJECT
 
 public:
-    explicit edit(QWidget *parent = nullptr,QList<mv>*movies=0,class home*hm=nullptr,QString * name=nullptr,int index=0);
+    explicit edit(QWidget *parent = nullptr,QList<mv>*movies=0,class home*hm=nullptr,QString * name=nullptr,int index=0,QString *comb_g=nullptr);
     ~edit();
 
 private slots:
@@ -35,6 +35,7 @@ private:
     QList<mv>*movies;
     home *home;
     QString * name;
+    QString *comb_g;
     int index;
     void mousePressEvent(QMouseEvent *event);
         void mouseMoveEvent(QMouseEvent *event);

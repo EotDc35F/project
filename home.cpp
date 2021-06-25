@@ -111,6 +111,28 @@ void home::load_table(QList<mv>*movies)
 
     }
 }
+QString combo_g="All";
+
+void home::comb_g(QString s)
+{
+    combo_g=s;
+    if(s=="All")
+       {
+        load_table(&movies);
+        return;
+    }
+    QList<mv> nmovies;
+    for(int i=0;i<movies.size();i++)
+    {
+      if(movies.at(i).genre.contains(s))
+      {
+          nmovies.append(movies.at(i));
+      }
+    }
+    load_table(&nmovies);
+}
+
+
 
 void home::destroy_items()
 {
@@ -150,7 +172,7 @@ void home::on_close_clicked()
 
 void home::on_add_clicked()
 {
-    add=new Add(this,&movies,this);
+    add=new Add(this,&movies,this,&combo_g);
        this->hide();
         add->setWindowFlags(Qt::Window|Qt::FramelessWindowHint);
        add->show();
@@ -175,7 +197,7 @@ void home::on_edit_clicked()
         ui->ledit->clear();
         return;
 }
-   edit=new class edit(this,&movies,this,&name,index);
+   edit=new class edit(this,&movies,this,&name,index,&combo_g);
     ui->ledit->clear();
    this->hide();
    edit->setWindowFlags(Qt::Window|Qt::FramelessWindowHint);
@@ -192,8 +214,9 @@ void home::on_remove_clicked()
         {
             movies.removeAt(i);
             QMessageBox::information(this,"Remove","Successfully removed");
-            load_table(&movies);
+            comb_g(combo_g);
             find=true;
+            this->ui->lremove->clear();
             break;
         }
     }
@@ -206,20 +229,7 @@ void home::on_remove_clicked()
 
 void home::on_comboBox_currentTextChanged(const QString &arg1)
 {
-    if(arg1=="All")
-       {
-        load_table(&movies);
-        return;
-    }
-    QList<mv> nmovies;
-    for(int i=0;i<movies.size();i++)
-    {
-      if(movies.at(i).genre.contains(arg1))
-      {
-          nmovies.append(movies.at(i));
-      }
-    }
-    load_table(&nmovies);
+    comb_g(arg1);
 }
 
 void home::on_pushButton_clicked()

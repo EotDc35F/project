@@ -13,6 +13,17 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">#close:hover
+{
+background-color:rgb(177, 0, 0);
+}
+#back:hover
+{
+background-color:rgb(197, 206, 201);
+}
+</string>
+  </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout">
@@ -43,8 +54,15 @@
          <height>50</height>
         </size>
        </property>
+       <property name="styleSheet">
+        <string notr="true">border:3px white;</string>
+       </property>
        <property name="text">
-        <string>back</string>
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="icons.qrc">
+         <normaloff>:/back/iconfinder_4829864_arrow_back_left_icon_512px.png</normaloff>:/back/iconfinder_4829864_arrow_back_left_icon_512px.png</iconset>
        </property>
        <property name="autoDefault">
         <bool>false</bool>
@@ -59,8 +77,15 @@
          <height>50</height>
         </size>
        </property>
+       <property name="styleSheet">
+        <string notr="true">border:3px white;</string>
+       </property>
        <property name="text">
-        <string>close</string>
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="icons.qrc">
+         <normaloff>:/close/iconfinder_3671740_close_icon_512px.png</normaloff>:/close/iconfinder_3671740_close_icon_512px.png</iconset>
        </property>
        <property name="autoDefault">
         <bool>false</bool>
@@ -276,8 +301,11 @@
          <height>0</height>
         </size>
        </property>
+       <property name="styleSheet">
+        <string notr="true">font: 9pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
        <property name="text">
-        <string>cancel</string>
+        <string>Cancel</string>
        </property>
        <property name="autoDefault">
         <bool>false</bool>
@@ -292,8 +320,11 @@
          <height>0</height>
         </size>
        </property>
+       <property name="styleSheet">
+        <string notr="true">font: 9pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
        <property name="text">
-        <string>edit</string>
+        <string>Edit</string>
        </property>
        <property name="autoDefault">
         <bool>false</bool>
@@ -333,6 +364,8 @@
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="icons.qrc"/>
+ </resources>
  <connections/>
 </ui>

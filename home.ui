@@ -19,6 +19,12 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">#close:hover
+{
+background-color:rgb(177, 0, 0);
+}</string>
+  </property>
   <layout class="QVBoxLayout" name="verticalLayout_5">
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout">
@@ -42,6 +48,9 @@
          <width>55</width>
          <height>55</height>
         </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border:3px white;</string>
        </property>
        <property name="text">
         <string/>
@@ -153,7 +162,8 @@
            <bool>false</bool>
           </property>
           <property name="styleSheet">
-           <string notr="true">text-align: center; </string>
+           <string notr="true">
+</string>
           </property>
           <property name="inputMethodHints">
            <set>Qt::ImhNone</set>
@@ -367,8 +377,14 @@
           </property>
           <item>
            <widget class="QLabel" name="label">
+            <property name="font">
+             <font>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
             <property name="text">
-             <string>search</string>
+             <string>Search</string>
             </property>
             <property name="margin">
              <number>1</number>
@@ -398,8 +414,14 @@
             </property>
             <item>
              <widget class="QLabel" name="label_2">
+              <property name="font">
+               <font>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
               <property name="text">
-               <string>genre</string>
+               <string>Genre</string>
               </property>
               <property name="margin">
                <number>1</number>
@@ -488,8 +510,14 @@
             </property>
             <item>
              <widget class="QLabel" name="label_3">
+              <property name="font">
+               <font>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
               <property name="text">
-               <string>remove</string>
+               <string>Remove</string>
               </property>
               <property name="margin">
                <number>1</number>
@@ -543,6 +571,9 @@
             </property>
             <item>
              <widget class="QPushButton" name="pushButton">
+              <property name="styleSheet">
+               <string notr="true">font: 9pt &quot;MS Shell Dlg 2&quot;;</string>
+              </property>
               <property name="text">
                <string>cancel</string>
               </property>
@@ -553,6 +584,9 @@
             </item>
             <item>
              <widget class="QPushButton" name="remove">
+              <property name="styleSheet">
+               <string notr="true">font: 9pt &quot;MS Shell Dlg 2&quot;;</string>
+              </property>
               <property name="text">
                <string>remove</string>
               </property>
@@ -570,8 +604,11 @@
             </property>
             <item row="4" column="0">
              <widget class="QPushButton" name="reserve">
+              <property name="styleSheet">
+               <string notr="true">font: 9pt &quot;MS Shell Dlg 2&quot;;</string>
+              </property>
               <property name="text">
-               <string>reserve</string>
+               <string>Reserve</string>
               </property>
               <property name="autoDefault">
                <bool>false</bool>
@@ -580,8 +617,14 @@
             </item>
             <item row="0" column="0">
              <widget class="QLabel" name="label_4">
+              <property name="font">
+               <font>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
               <property name="text">
-               <string>edit</string>
+               <string>Edit</string>
               </property>
               <property name="margin">
                <number>1</number>
@@ -590,8 +633,11 @@
             </item>
             <item row="3" column="0">
              <widget class="QPushButton" name="add">
+              <property name="styleSheet">
+               <string notr="true">font: 9pt &quot;MS Shell Dlg 2&quot;;</string>
+              </property>
               <property name="text">
-               <string>add</string>
+               <string>Add</string>
               </property>
               <property name="autoDefault">
                <bool>false</bool>
@@ -612,8 +658,11 @@
               </property>
               <item>
                <widget class="QPushButton" name="cancel">
+                <property name="styleSheet">
+                 <string notr="true">font: 9pt &quot;MS Shell Dlg 2&quot;;</string>
+                </property>
                 <property name="text">
-                 <string>cancel</string>
+                 <string>Cancel</string>
                 </property>
                 <property name="autoDefault">
                  <bool>false</bool>
@@ -622,8 +671,11 @@
               </item>
               <item>
                <widget class="QPushButton" name="edit">
+                <property name="styleSheet">
+                 <string notr="true">font: 9pt &quot;MS Shell Dlg 2&quot;;</string>
+                </property>
                 <property name="text">
-                 <string>edit</string>
+                 <string>Edit</string>
                 </property>
                 <property name="autoDefault">
                  <bool>false</bool>

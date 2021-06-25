@@ -1,7 +1,7 @@
 #include "edit.h"
 #include "ui_edit.h"
 
-edit::edit(QWidget *parent,QList<mv>*movie,class home*hm,QString*nm,int ix) :
+edit::edit(QWidget *parent,QList<mv>*movie,class home*hm,QString*nm,int ix,QString* comb) :
     QDialog(parent),
     ui(new Ui::edit)
 {
@@ -10,6 +10,7 @@ edit::edit(QWidget *parent,QList<mv>*movie,class home*hm,QString*nm,int ix) :
     this->movies=movie;
     this->name=nm;
     this->index=ix;
+    this-> comb_g=comb;
     load();
 }
 
@@ -69,7 +70,7 @@ void edit::on_edit_2_clicked()
         }
     }
    (*movies)[index].genre=genre;
-    home->load_table(movies);
+    home->comb_g(*comb_g);
     QMessageBox::information(this,"Edit","Successfully edited");
     this->hide();
     home->show();

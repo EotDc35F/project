@@ -2,14 +2,14 @@
 #include "ui_add.h"
 
 
-Add::Add(QWidget *parent,QList<mv>*movie,class home *hm) :
+Add::Add(QWidget *parent,QList<mv>*movie,class home *hm,QString *c) :
     QDialog(parent),
     ui(new Ui::Add)
 {
     ui->setupUi(this);
     this->movies=movie;
     this->home=hm;
-
+    this-> combo_g=c;
 
 }
 
@@ -66,7 +66,7 @@ void Add::on_add_clicked()
     tmp.genre=genre;
    movies->append(tmp);
    QMessageBox::information(this,"Add","Successfully added");
-    home->load_table(movies);
+    home->comb_g(*combo_g);
     this->hide();
     home->show();
 
@@ -81,3 +81,9 @@ void Add::mouseMoveEvent(QMouseEvent *event) {
     move(event->globalX()-m_nMouseClick_X_Coordinate,event->globalY()-m_nMouseClick_Y_Coordinate);
 }
 
+
+void Add::on_back_clicked()
+{
+    this->hide();
+    home->show();
+}

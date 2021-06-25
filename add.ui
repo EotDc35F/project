@@ -13,6 +13,16 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">#close:hover
+{
+background-color:rgb(177, 0, 0);
+}
+#back:hover
+{
+background-color:rgb(197, 206, 201);
+}</string>
+  </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout">
@@ -30,7 +40,7 @@
       </spacer>
      </item>
      <item>
-      <widget class="QPushButton" name="return_2">
+      <widget class="QPushButton" name="back">
        <property name="minimumSize">
         <size>
          <width>50</width>
@@ -48,6 +58,9 @@
          <width>0</width>
          <height>0</height>
         </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border:3px white;</string>
        </property>
        <property name="text">
         <string/>
@@ -68,6 +81,9 @@
          <width>50</width>
          <height>50</height>
         </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border:3px white;</string>
        </property>
        <property name="text">
         <string/>
@@ -107,7 +123,7 @@
      <item>
       <widget class="QLabel" name="label_8">
        <property name="text">
-        <string> please complete the movie information</string>
+        <string> Please complete the movie information</string>
        </property>
        <property name="margin">
         <number>5</number>
@@ -157,7 +173,7 @@
        <item row="5" column="0">
         <widget class="QLabel" name="label_6">
          <property name="text">
-          <string>imdb</string>
+          <string>IMDB Score</string>
          </property>
          <property name="margin">
           <number>5</number>
@@ -179,7 +195,7 @@
        <item row="2" column="0">
         <widget class="QLabel" name="label_3">
          <property name="text">
-          <string>stars</string>
+          <string>Stars</string>
          </property>
          <property name="margin">
           <number>5</number>
@@ -189,7 +205,7 @@
        <item row="0" column="0">
         <widget class="QLabel" name="label">
          <property name="text">
-          <string>name</string>
+          <string>Name</string>
          </property>
          <property name="margin">
           <number>5</number>
@@ -205,7 +221,7 @@
        <item row="3" column="0">
         <widget class="QLabel" name="label_4">
          <property name="text">
-          <string>releade date</string>
+          <string>Releade date</string>
          </property>
          <property name="margin">
           <number>5</number>
@@ -215,7 +231,7 @@
        <item row="6" column="0">
         <widget class="QLabel" name="label_7">
          <property name="text">
-          <string>genre</string>
+          <string>Genre</string>
          </property>
          <property name="margin">
           <number>5</number>
@@ -225,7 +241,7 @@
        <item row="1" column="0">
         <widget class="QLabel" name="label_2">
          <property name="text">
-          <string>director</string>
+          <string>Director</string>
          </property>
          <property name="margin">
           <number>5</number>
@@ -235,7 +251,7 @@
        <item row="4" column="0">
         <widget class="QLabel" name="label_5">
          <property name="text">
-          <string>language</string>
+          <string>Language</string>
          </property>
          <property name="margin">
           <number>5</number>
@@ -355,8 +371,11 @@
      </item>
      <item>
       <widget class="QPushButton" name="cancel">
+       <property name="styleSheet">
+        <string notr="true">font: 9pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
        <property name="text">
-        <string>cancel</string>
+        <string>Cancel</string>
        </property>
        <property name="autoDefault">
         <bool>false</bool>
@@ -365,8 +384,12 @@
      </item>
      <item>
       <widget class="QPushButton" name="add">
+       <property name="styleSheet">
+        <string notr="true">font: 9pt &quot;MS Shell Dlg 2&quot;;
+</string>
+       </property>
        <property name="text">
-        <string>add</string>
+        <string>Add</string>
        </property>
        <property name="autoDefault">
         <bool>false</bool>
