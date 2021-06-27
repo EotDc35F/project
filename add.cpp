@@ -18,13 +18,7 @@ Add::~Add()
     delete ui;
 }
 
-void Add::on_return_2_clicked()
-{
-    this->hide();
-  parentWidget()->show();
 
-
-}
 
 void Add::on_cancel_clicked()
 {
@@ -82,8 +76,9 @@ void Add::mouseMoveEvent(QMouseEvent *event) {
 }
 
 
-void Add::on_back_clicked()
+
+void Add::on_ret_clicked()
 {
     this->hide();
-    home->show();
+    parentWidget()->show();
 }

@@ -1,14 +1,20 @@
 <RCC>
     <qresource prefix="/close">
         <file>iconfinder_3671740_close_icon_512px.png</file>
+        <file>cw</file>
+        <file>iconfinder_367174_close_icon_512px.png</file>
     </qresource>
     <qresource prefix="/relod">
         <file>iconfinder_172536_reload_icon_512px.png</file>
+        <file>iconfinder_172536_reload_icon_51px.png</file>
+        <file>iconfinder_326679_refresh_reload_icon_512px.png</file>
     </qresource>
     <qresource prefix="/back">
         <file>iconfinder_4829864_arrow_back_left_icon_512px.png</file>
     </qresource>
     <qresource prefix="/image">
         <file>Cinema-Wallpapers-High-Quality-Download-Free.jpg</file>
+        <file>2.jpg</file>
+        <file>pngtree-blue-splash-color-fog-smoke-background-image_313035.jpg</file>
     </qresource>
 </RCC>

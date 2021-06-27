@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1383</width>
-    <height>604</height>
+    <height>612</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -23,6 +23,49 @@
    <string notr="true">#close:hover
 {
 background-color:rgb(177, 0, 0);
+}
+#home
+{
+background:url(:/image/2.jpg);
+}
+#add:hover
+{
+background-color:rgb(166, 224, 255)
+}
+#reserve:hover
+{
+background-color:rgb(166, 224, 255)
+}
+#pushButton:hover
+{
+background-color:rgb(166, 224, 255);
+}
+#cancel:hover
+{
+background-color:rgb(166, 224, 255);
+}
+#remove:hover
+{
+background-color:rgb(166, 224, 255);
+}
+#edit:hover
+{
+background-color:rgb(166, 224, 255);
+}
+#comboBox:hover
+{
+background-color:rgb(166, 224, 255);
+}
+#main
+{
+border:5px solid rgb(22, 38, 72);
+border-radius:5px;
+}
+#tableWidget
+{
+border:5px solid rgb(22, 38, 72);
+border-radius:5px;
+background-color:rgb(243, 243, 243)
 }</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_5">
@@ -162,8 +205,7 @@ background-color:rgb(177, 0, 0);
            <bool>false</bool>
           </property>
           <property name="styleSheet">
-           <string notr="true">
-</string>
+           <string notr="true"/>
           </property>
           <property name="inputMethodHints">
            <set>Qt::ImhNone</set>
@@ -194,6 +236,9 @@ background-color:rgb(177, 0, 0);
           </property>
           <property name="showGrid">
            <bool>true</bool>
+          </property>
+          <property name="gridStyle">
+           <enum>Qt::SolidLine</enum>
           </property>
           <property name="sortingEnabled">
            <bool>true</bool>
@@ -354,371 +399,346 @@ background-color:rgb(177, 0, 0);
      </item>
      <item>
       <widget class="QWidget" name="widget" native="true">
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
        <layout class="QVBoxLayout" name="verticalLayout_6">
         <property name="leftMargin">
          <number>1</number>
         </property>
         <property name="topMargin">
-         <number>0</number>
+         <number>10</number>
         </property>
         <property name="rightMargin">
-         <number>1</number>
+         <number>5</number>
         </property>
         <property name="bottomMargin">
          <number>0</number>
         </property>
         <item>
-         <layout class="QVBoxLayout" name="verticalLayout_2">
-          <property name="topMargin">
-           <number>0</number>
-          </property>
-          <property name="bottomMargin">
-           <number>0</number>
-          </property>
-          <item>
-           <widget class="QLabel" name="label">
-            <property name="font">
-             <font>
-              <weight>75</weight>
-              <bold>true</bold>
-             </font>
-            </property>
-            <property name="text">
-             <string>Search</string>
-            </property>
-            <property name="margin">
-             <number>1</number>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QLineEdit" name="lineEdit"/>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_4">
-            <property name="topMargin">
-             <number>0</number>
-            </property>
-            <property name="bottomMargin">
-             <number>0</number>
-            </property>
-           </layout>
-          </item>
-          <item>
-           <layout class="QVBoxLayout" name="verticalLayout_3">
-            <property name="topMargin">
-             <number>0</number>
-            </property>
-            <property name="bottomMargin">
-             <number>0</number>
-            </property>
-            <item>
-             <widget class="QLabel" name="label_2">
-              <property name="font">
-               <font>
-                <weight>75</weight>
-                <bold>true</bold>
-               </font>
-              </property>
-              <property name="text">
-               <string>Genre</string>
-              </property>
-              <property name="margin">
-               <number>1</number>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QComboBox" name="comboBox">
-              <item>
-               <property name="text">
-                <string>All</string>
+         <widget class="QWidget" name="main" native="true">
+          <layout class="QVBoxLayout" name="verticalLayout_2">
+           <property name="leftMargin">
+            <number>10</number>
+           </property>
+           <property name="topMargin">
+            <number>10</number>
+           </property>
+           <property name="rightMargin">
+            <number>10</number>
+           </property>
+           <property name="bottomMargin">
+            <number>10</number>
+           </property>
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout">
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label">
+               <property name="font">
+                <font>
+                 <pointsize>9</pointsize>
+                 <weight>50</weight>
+                 <bold>false</bold>
+                </font>
                </property>
-              </item>
-              <item>
                <property name="text">
-                <string>Drama</string>
+                <string>Search</string>
                </property>
-              </item>
-              <item>
+               <property name="margin">
+                <number>1</number>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit">
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_3">
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_2">
+               <property name="font">
+                <font>
+                 <pointsize>9</pointsize>
+                 <weight>50</weight>
+                 <bold>false</bold>
+                </font>
+               </property>
                <property name="text">
-                <string>Action</string>
+                <string>Genre</string>
                </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>Mystery</string>
+               <property name="margin">
+                <number>1</number>
                </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>Romance</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>Comedy</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>Crime</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>War</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>Sci_Fi</string>
-               </property>
-              </item>
-              <item>
-               <property name="text">
-                <string>Thriller</string>
-               </property>
-              </item>
-             </widget>
-            </item>
-            <item>
-             <spacer name="verticalSpacer_5">
-              <property name="orientation">
-               <enum>Qt::Vertical</enum>
-              </property>
-              <property name="sizeType">
-               <enum>QSizePolicy::Fixed</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>20</width>
-                <height>10</height>
-               </size>
-              </property>
-             </spacer>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <layout class="QVBoxLayout" name="verticalLayout_4">
-            <property name="topMargin">
-             <number>0</number>
-            </property>
-            <property name="bottomMargin">
-             <number>0</number>
-            </property>
-            <item>
-             <widget class="QLabel" name="label_3">
-              <property name="font">
-               <font>
-                <weight>75</weight>
-                <bold>true</bold>
-               </font>
-              </property>
-              <property name="text">
-               <string>Remove</string>
-              </property>
-              <property name="margin">
-               <number>1</number>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLineEdit" name="lremove">
-              <property name="toolTip">
-               <string/>
-              </property>
-              <property name="accessibleDescription">
-               <string/>
-              </property>
-              <property name="inputMethodHints">
-               <set>Qt::ImhNone</set>
-              </property>
-              <property name="inputMask">
-               <string/>
-              </property>
-              <property name="readOnly">
-               <bool>false</bool>
-              </property>
-              <property name="placeholderText">
-               <string>movie's name</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <spacer name="verticalSpacer_10">
-            <property name="orientation">
-             <enum>Qt::Vertical</enum>
-            </property>
-            <property name="sizeType">
-             <enum>QSizePolicy::Fixed</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>20</width>
-              <height>5</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_6">
-            <property name="topMargin">
-             <number>0</number>
-            </property>
-            <item>
-             <widget class="QPushButton" name="pushButton">
-              <property name="styleSheet">
-               <string notr="true">font: 9pt &quot;MS Shell Dlg 2&quot;;</string>
-              </property>
-              <property name="text">
-               <string>cancel</string>
-              </property>
-              <property name="autoDefault">
-               <bool>false</bool>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="remove">
-              <property name="styleSheet">
-               <string notr="true">font: 9pt &quot;MS Shell Dlg 2&quot;;</string>
-              </property>
-              <property name="text">
-               <string>remove</string>
-              </property>
-              <property name="autoDefault">
-               <bool>false</bool>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <layout class="QGridLayout" name="gridLayout_3">
-            <property name="topMargin">
-             <number>0</number>
-            </property>
-            <item row="4" column="0">
-             <widget class="QPushButton" name="reserve">
-              <property name="styleSheet">
-               <string notr="true">font: 9pt &quot;MS Shell Dlg 2&quot;;</string>
-              </property>
-              <property name="text">
-               <string>Reserve</string>
-              </property>
-              <property name="autoDefault">
-               <bool>false</bool>
-              </property>
-             </widget>
-            </item>
-            <item row="0" column="0">
-             <widget class="QLabel" name="label_4">
-              <property name="font">
-               <font>
-                <weight>75</weight>
-                <bold>true</bold>
-               </font>
-              </property>
-              <property name="text">
-               <string>Edit</string>
-              </property>
-              <property name="margin">
-               <number>1</number>
-              </property>
-             </widget>
-            </item>
-            <item row="3" column="0">
-             <widget class="QPushButton" name="add">
-              <property name="styleSheet">
-               <string notr="true">font: 9pt &quot;MS Shell Dlg 2&quot;;</string>
-              </property>
-              <property name="text">
-               <string>Add</string>
-              </property>
-              <property name="autoDefault">
-               <bool>false</bool>
-              </property>
-             </widget>
-            </item>
-            <item row="1" column="0">
-             <widget class="QLineEdit" name="ledit">
-              <property name="placeholderText">
-               <string>movie's name</string>
-              </property>
-             </widget>
-            </item>
-            <item row="2" column="0">
-             <layout class="QHBoxLayout" name="horizontalLayout_2">
-              <property name="topMargin">
-               <number>0</number>
-              </property>
-              <item>
-               <widget class="QPushButton" name="cancel">
-                <property name="styleSheet">
-                 <string notr="true">font: 9pt &quot;MS Shell Dlg 2&quot;;</string>
-                </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="comboBox">
+               <item>
                 <property name="text">
-                 <string>Cancel</string>
+                 <string>All</string>
                 </property>
-                <property name="autoDefault">
-                 <bool>false</bool>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QPushButton" name="edit">
-                <property name="styleSheet">
-                 <string notr="true">font: 9pt &quot;MS Shell Dlg 2&quot;;</string>
-                </property>
+               </item>
+               <item>
                 <property name="text">
-                 <string>Edit</string>
+                 <string>Drama</string>
                 </property>
-                <property name="autoDefault">
-                 <bool>false</bool>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Action</string>
                 </property>
-               </widget>
-              </item>
-             </layout>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <spacer name="verticalSpacer_3">
-            <property name="orientation">
-             <enum>Qt::Vertical</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>20</width>
-              <height>40</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-         </layout>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Mystery</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Romance</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Comedy</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Crime</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>War</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Sci_Fi</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Thriller</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_4">
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_3">
+               <property name="font">
+                <font>
+                 <pointsize>9</pointsize>
+                 <weight>50</weight>
+                 <bold>false</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>Remove</string>
+               </property>
+               <property name="margin">
+                <number>1</number>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lremove">
+               <property name="toolTip">
+                <string/>
+               </property>
+               <property name="accessibleDescription">
+                <string/>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="inputMethodHints">
+                <set>Qt::ImhNone</set>
+               </property>
+               <property name="inputMask">
+                <string/>
+               </property>
+               <property name="readOnly">
+                <bool>false</bool>
+               </property>
+               <property name="placeholderText">
+                <string>movie's name</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_6">
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QPushButton" name="pushButton">
+               <property name="styleSheet">
+                <string notr="true">font: 9pt &quot;MS Shell Dlg 2&quot;;</string>
+               </property>
+               <property name="text">
+                <string>cancel</string>
+               </property>
+               <property name="autoDefault">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="remove">
+               <property name="styleSheet">
+                <string notr="true">font: 9pt &quot;MS Shell Dlg 2&quot;;</string>
+               </property>
+               <property name="text">
+                <string>remove</string>
+               </property>
+               <property name="autoDefault">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QGridLayout" name="gridLayout_3">
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <item row="1" column="0">
+              <widget class="QLineEdit" name="ledit">
+               <property name="placeholderText">
+                <string>movie's name</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="0">
+              <widget class="QPushButton" name="reserve">
+               <property name="styleSheet">
+                <string notr="true">font: 9pt &quot;MS Shell Dlg 2&quot;;</string>
+               </property>
+               <property name="text">
+                <string>Reserve</string>
+               </property>
+               <property name="autoDefault">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="0">
+              <widget class="QLabel" name="label_4">
+               <property name="font">
+                <font>
+                 <pointsize>9</pointsize>
+                 <weight>50</weight>
+                 <bold>false</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>Edit</string>
+               </property>
+               <property name="margin">
+                <number>1</number>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="0">
+              <layout class="QHBoxLayout" name="horizontalLayout_2">
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <item>
+                <widget class="QPushButton" name="cancel">
+                 <property name="styleSheet">
+                  <string notr="true">font: 9pt &quot;MS Shell Dlg 2&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>Cancel</string>
+                 </property>
+                 <property name="autoDefault">
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="edit">
+                 <property name="styleSheet">
+                  <string notr="true">font: 9pt &quot;MS Shell Dlg 2&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>Edit</string>
+                 </property>
+                 <property name="autoDefault">
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item row="3" column="0">
+              <widget class="QPushButton" name="add">
+               <property name="styleSheet">
+                <string notr="true">font: 9pt &quot;MS Shell Dlg 2&quot;;
+</string>
+               </property>
+               <property name="text">
+                <string>Add</string>
+               </property>
+               <property name="autoDefault">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Fixed</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>50</height>
+           </size>
+          </property>
+         </spacer>
         </item>
        </layout>
       </widget>
-     </item>
-     <item>
-      <spacer name="horizontalSpacer_3">
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="sizeType">
-        <enum>QSizePolicy::Fixed</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>10</width>
-         <height>20</height>
-        </size>
-       </property>
-      </spacer>
      </item>
     </layout>
    </item>

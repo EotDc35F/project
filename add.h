@@ -22,7 +22,7 @@ public:
 
 private slots:
 
-    void on_return_2_clicked();
+
 
    void on_cancel_clicked();
 
@@ -30,7 +30,7 @@ private slots:
 
     void on_add_clicked();
 
-    void on_back_clicked();
+    void on_ret_clicked();
 
 private:
     Ui::Add *ui;

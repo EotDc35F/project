@@ -25,24 +25,26 @@ background-color:rgb(177, 0, 0);
 }
 #login:hover
 {
-background-color:rgb(190, 195, 190);
+background-color:rgb(96, 144, 152)
 }
 #signup:hover
 {
-background-color:rgb(190, 195, 190);
+background-color:rgb(96, 144, 152)
 }
 #reload:hover
 {
-background-color:rgb(197, 206, 201);
+background-color:rgb(60, 100, 127)
 }
 #Dialog
 {
 background:url(:/image/Cinema-Wallpapers-High-Quality-Download-Free.jpg);
-}</string>
+}
+
+</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout">
+    <layout class="QHBoxLayout" name="top">
      <item>
       <spacer name="horizontalSpacer">
        <property name="orientation">
@@ -65,7 +67,7 @@ background:url(:/image/Cinema-Wallpapers-High-Quality-Download-Free.jpg);
         </size>
        </property>
        <property name="styleSheet">
-        <string notr="true">border:3px white;
+        <string notr="true">border:1px white;
 </string>
        </property>
        <property name="text">
@@ -73,12 +75,12 @@ background:url(:/image/Cinema-Wallpapers-High-Quality-Download-Free.jpg);
        </property>
        <property name="icon">
         <iconset resource="icons.qrc">
-         <normaloff>:/relod/iconfinder_172536_reload_icon_512px.png</normaloff>:/relod/iconfinder_172536_reload_icon_512px.png</iconset>
+         <normaloff>:/relod/iconfinder_326679_refresh_reload_icon_512px.png</normaloff>:/relod/iconfinder_326679_refresh_reload_icon_512px.png</iconset>
        </property>
        <property name="iconSize">
         <size>
-         <width>30</width>
-         <height>30</height>
+         <width>25</width>
+         <height>25</height>
         </size>
        </property>
        <property name="autoDefault">
@@ -98,14 +100,14 @@ background:url(:/image/Cinema-Wallpapers-High-Quality-Download-Free.jpg);
         </size>
        </property>
        <property name="styleSheet">
-        <string notr="true">border:3px white;</string>
+        <string notr="true">border:1px white;</string>
        </property>
        <property name="text">
         <string/>
        </property>
        <property name="icon">
         <iconset resource="icons.qrc">
-         <normaloff>:/close/iconfinder_3671740_close_icon_512px.png</normaloff>:/close/iconfinder_3671740_close_icon_512px.png</iconset>
+         <normaloff>:/close/iconfinder_367174_close_icon_512px.png</normaloff>:/close/iconfinder_367174_close_icon_512px.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -283,7 +285,11 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
            </spacer>
           </item>
           <item>
-           <widget class="QLineEdit" name="username"/>
+           <widget class="QLineEdit" name="username">
+            <property name="styleSheet">
+             <string notr="true">background-color:rgb(229, 229, 229)</string>
+            </property>
+           </widget>
           </item>
           <item>
            <spacer name="horizontalSpacer_10">
@@ -352,6 +358,9 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
           </item>
           <item>
            <widget class="QLineEdit" name="password">
+            <property name="styleSheet">
+             <string notr="true">background-color:rgb(229, 229, 229)</string>
+            </property>
             <property name="echoMode">
              <enum>QLineEdit::Password</enum>
             </property>

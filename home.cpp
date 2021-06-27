@@ -66,6 +66,7 @@ void home::load_table(QList<mv>*movies)
     ui->tableWidget->setRowCount(movies->size());
     for(int i=0;i<movies->size();i++)
     {
+
         QTableWidgetItem* director =new QTableWidgetItem;
         QTableWidgetItem* stars = new QTableWidgetItem;
         QTableWidgetItem*release_year =new QTableWidgetItem;
@@ -75,6 +76,7 @@ void home::load_table(QList<mv>*movies)
         QTableWidgetItem*valence =new QTableWidgetItem;
         QTableWidgetItem* imdb = new QTableWidgetItem;
         director->setTextAlignment(Qt::AlignCenter);
+
         director->setText(movies->at(i).director);
         stars->setText(movies->at(i).stars);
         stars->setTextAlignment(Qt::AlignCenter);
