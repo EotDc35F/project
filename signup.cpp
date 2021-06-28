@@ -7,6 +7,9 @@ signup::signup(QWidget *parent,QList<usr>*user) :
 {
     ui->setupUi(this);
     this->users=user;
+    timer_1s = new QTimer(this);
+    connect(timer_1s, SIGNAL(timeout()), this, SLOT(UpdateTime()));
+    timer_1s->start(100);
 
 
 }
@@ -75,6 +78,11 @@ void signup::on_signup_2_clicked()
        parentWidget()->show();
 
 
+}
+
+void signup::UpdateTime()
+{
+   ui->time->setText(QTime::currentTime().toString("hh:mm:ss"));
 }
 
 

@@ -6,6 +6,8 @@
 #include <QSettings>
 #include <qtablewidget.h>
 #include <QWidgetItem>
+#include <QTimer>
+#include <QTime>
 
 
 #endif // CLASSES_H

@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1383</width>
-    <height>612</height>
+    <height>622</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -71,6 +71,18 @@ background-color:rgb(243, 243, 243)
   <layout class="QVBoxLayout" name="verticalLayout_5">
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="time">
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
      <item>
       <spacer name="horizontalSpacer">
        <property name="orientation">
@@ -165,7 +177,7 @@ background-color:rgb(243, 243, 243)
           <property name="minimumSize">
            <size>
             <width>1022</width>
-            <height>375</height>
+            <height>410</height>
            </size>
           </property>
           <property name="sizeIncrement">
@@ -439,7 +451,7 @@ background-color:rgb(243, 243, 243)
               <widget class="QLabel" name="label">
                <property name="font">
                 <font>
-                 <pointsize>9</pointsize>
+                 <pointsize>10</pointsize>
                  <weight>50</weight>
                  <bold>false</bold>
                 </font>
@@ -473,7 +485,7 @@ background-color:rgb(243, 243, 243)
               <widget class="QLabel" name="label_2">
                <property name="font">
                 <font>
-                 <pointsize>9</pointsize>
+                 <pointsize>10</pointsize>
                  <weight>50</weight>
                  <bold>false</bold>
                 </font>
@@ -554,7 +566,7 @@ background-color:rgb(243, 243, 243)
               <widget class="QLabel" name="label_3">
                <property name="font">
                 <font>
-                 <pointsize>9</pointsize>
+                 <pointsize>10</pointsize>
                  <weight>50</weight>
                  <bold>false</bold>
                 </font>
@@ -656,7 +668,7 @@ background-color:rgb(243, 243, 243)
               <widget class="QLabel" name="label_4">
                <property name="font">
                 <font>
-                 <pointsize>9</pointsize>
+                 <pointsize>10</pointsize>
                  <weight>50</weight>
                  <bold>false</bold>
                 </font>
@@ -732,7 +744,7 @@ background-color:rgb(243, 243, 243)
           <property name="sizeHint" stdset="0">
            <size>
             <width>20</width>
-            <height>50</height>
+            <height>52</height>
            </size>
           </property>
          </spacer>

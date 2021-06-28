@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>836</width>
-    <height>653</height>
+    <height>657</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -44,11 +44,21 @@ border-radius:5px;
    <item>
     <widget class="QWidget" name="widget" native="true">
      <property name="styleSheet">
-      <string notr="true">
-
-</string>
+      <string notr="true"/>
      </property>
      <layout class="QHBoxLayout" name="top">
+      <item>
+       <widget class="QLabel" name="time">
+        <property name="font">
+         <font>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
       <item>
        <spacer name="horizontalSpacer">
         <property name="orientation">

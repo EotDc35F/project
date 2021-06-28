@@ -1,12 +1,9 @@
 <RCC>
     <qresource prefix="/close">
         <file>iconfinder_3671740_close_icon_512px.png</file>
-        <file>cw</file>
         <file>iconfinder_367174_close_icon_512px.png</file>
     </qresource>
     <qresource prefix="/relod">
-        <file>iconfinder_172536_reload_icon_512px.png</file>
-        <file>iconfinder_172536_reload_icon_51px.png</file>
         <file>iconfinder_326679_refresh_reload_icon_512px.png</file>
     </qresource>
     <qresource prefix="/back">

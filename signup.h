@@ -22,6 +22,7 @@ private slots:
     void on_back_clicked();
 
     void on_signup_2_clicked();
+    void UpdateTime();
 
 
 
@@ -29,6 +30,7 @@ private:
     Ui::signup *ui;
     QList<usr>*users;
     void save_to_setting();
+    QTimer *timer_1s;
 };
 
 #endif // SIGNUP_H

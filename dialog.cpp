@@ -7,6 +7,9 @@ Dialog::Dialog(QWidget *parent)
 {
     ui->setupUi(this);
     save_to_list();
+    timer_1s = new QTimer(this);
+    connect(timer_1s, SIGNAL(timeout()), this, SLOT(UpdateTime()));
+    timer_1s->start(100);
 
 }
 
@@ -22,27 +25,6 @@ void Dialog::on_signup_clicked()
     signup->setWindowFlags(Qt::Window|Qt::FramelessWindowHint);
     this->hide();
     signup->show();
-//    QString u= this->ui->username->text();
-//    for(int i=0;i<users.size();i++)
-//    {
-//       if(users.at(i).username==u  )
-//          {
-
-//           QMessageBox::critical(this," ","sorry,this username is already taken.");
-//           this->ui->username->clear();
-//           this->ui->password->clear();
-//           return;
-//       }
-//    }
-//   usr tmp;
-//   tmp.username=this->ui->username->text();
-//   tmp.password=this->ui->password->text();
-//   users.append(tmp);
-//   save_to_setting();
-//   home=new class home(this);
-//   this->hide();
-//   home->setWindowFlags(Qt::Window|Qt::FramelessWindowHint);
-//   home->show();
 
 }
 
@@ -81,6 +63,11 @@ void Dialog::on_login_clicked()
        this->ui->username->clear();
        this->ui->password->clear();
    }
+}
+
+void Dialog::UpdateTime()
+{
+  ui->time-> setText(QTime::currentTime().toString("hh:mm:ss"));
 }
 
 void Dialog::mousePressEvent(QMouseEvent *event) {

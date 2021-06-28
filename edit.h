@@ -29,6 +29,8 @@ private slots:
     void on_cancel_clicked();
 
     void on_back_clicked();
+    void UpdateTime();
+
 
 private:
     Ui::edit *ui;
@@ -39,8 +41,10 @@ private:
     int index;
     void mousePressEvent(QMouseEvent *event);
         void mouseMoveEvent(QMouseEvent *event);
+
         int m_nMouseClick_X_Coordinate;
         int m_nMouseClick_Y_Coordinate;
+        QTimer *timer_1s;
 };
 
 #endif // EDIT_H

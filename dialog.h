@@ -26,7 +26,7 @@ private slots:
     void on_reload_clicked();
 
     void on_login_clicked();
-
+    void UpdateTime();
 
 
 
@@ -45,5 +45,6 @@ private:
         void mouseMoveEvent(QMouseEvent *event);
         int m_nMouseClick_X_Coordinate;
         int m_nMouseClick_Y_Coordinate;
+          QTimer *timer_1s;
 };
 #endif // DIALOG_H

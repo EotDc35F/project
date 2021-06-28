@@ -40,6 +40,7 @@ private slots:
     void on_lineEdit_textChanged(const QString &arg1);
 
     void on_reserve_clicked();
+    void UpdateTime();
 
 private:
     Ui::home *ui;
@@ -58,6 +59,7 @@ private:
     void save_to_setting();
     void save_to_list();
     void destroy_items();
+    QTimer *timer_1s;
 
     
 };

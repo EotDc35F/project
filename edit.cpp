@@ -1,5 +1,6 @@
 #include "edit.h"
 #include "ui_edit.h"
+#include <QDebug>
 
 edit::edit(QWidget *parent,QList<mv>*movie,class home*hm,QString*nm,int ix,QString* comb) :
     QDialog(parent),
@@ -11,7 +12,12 @@ edit::edit(QWidget *parent,QList<mv>*movie,class home*hm,QString*nm,int ix,QStri
     this->name=nm;
     this->index=ix;
     this-> comb_g=comb;
+    timer_1s = new QTimer(this);
+    connect(timer_1s, SIGNAL(timeout()), this, SLOT(UpdateTime()));
+    timer_1s->start(100);
     load();
+
+
 }
 
 edit::~edit()
@@ -32,14 +38,17 @@ void edit::load()
            ui->limdb->setText(movies->at(index).imdb);
            ui->llanguage->setText(movies->at(index).language);
            ui->lreleas->setText(movies->at(index).release_year);
-           QObjectList boxes=this->children();
-           foreach(QObject* obj,boxes)
+           QObjectList boxes=this->ui->qMain->children();
+           for(QObject* obj:boxes)
            {
                if(obj->inherits("QCheckBox"))
                {
                    QCheckBox* box=qobject_cast<QCheckBox*>(obj);
-                   if( box && movies->at(index).genre.contains(box->text()))
+                   if( box && movies->at(index).genre.contains(box->text(),Qt::CaseInsensitive))
+                     {
+
                        box->setChecked(true);
+                   }
 
                }
 
@@ -58,7 +67,7 @@ void edit::on_edit_2_clicked()
     (*movies)[index].language=ui->llanguage->text();
     (*movies)[index].release_year=ui->lreleas->text();
     QString genre;
-    QObjectList boxes=this->children();
+    QObjectList boxes=this->ui->qMain->children();
     foreach(QObject* obj,boxes)
     {
         if(obj->inherits("QCheckBox"))
@@ -95,3 +104,9 @@ void edit::mousePressEvent(QMouseEvent *event) {
 void edit::mouseMoveEvent(QMouseEvent *event) {
     move(event->globalX()-m_nMouseClick_X_Coordinate,event->globalY()-m_nMouseClick_Y_Coordinate);
 }
+
+void edit::UpdateTime()
+{
+    ui->time->setText(QTime::currentTime().toString("hh:mm:ss"));
+}
+

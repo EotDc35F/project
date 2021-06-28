@@ -23,10 +23,12 @@ private slots:
     void on_reset_clicked();
 
     void on_close_clicked();
+    void UpdateTime();
 
 private:
     Ui::forget *ui;
     QList<usr>*users;
+    QTimer *timer_1s;
 };
 
 #endif // FORGET_H

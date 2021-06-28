@@ -6,6 +6,9 @@ home::home(QWidget *parent) :
     ui(new Ui::home)
 {
     ui->setupUi(this);
+    timer_1s = new QTimer(this);
+    connect(timer_1s, SIGNAL(timeout()), this, SLOT(UpdateTime()));
+    timer_1s->start(100);
     save_to_list();
     load_table( &movies);
 }
@@ -295,5 +298,10 @@ void home::on_reserve_clicked()
     reserve=new class reserve(this,&movies,this);
        this->hide();
         reserve->setWindowFlags(Qt::Window|Qt::FramelessWindowHint);
-       reserve->show();
+        reserve->show();
+}
+
+void home::UpdateTime()
+{
+    ui->time->setText(QTime::currentTime().toString("hh:mm:ss"));
 }

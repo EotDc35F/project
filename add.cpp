@@ -10,6 +10,9 @@ Add::Add(QWidget *parent,QList<mv>*movie,class home *hm,QString *c) :
     this->movies=movie;
     this->home=hm;
     this-> combo_g=c;
+    timer_1s = new QTimer(this);
+    connect(timer_1s, SIGNAL(timeout()), this, SLOT(UpdateTime()));
+    timer_1s->start(100);
 
 }
 
@@ -46,7 +49,7 @@ void Add::on_add_clicked()
     tmp.imdb=this->ui->limdb->text();
     tmp.valence="30";
     QString genre;
-    QObjectList boxes=this->children();
+    QObjectList boxes=this->ui->qMain->children();
     foreach(QObject* obj,boxes)
     {
         if(obj->inherits("QCheckBox"))
@@ -81,4 +84,9 @@ void Add::on_ret_clicked()
 {
     this->hide();
     parentWidget()->show();
+}
+
+void Add::UpdateTime()
+{
+    ui->time->setText(QTime::currentTime().toString("hh:mm:ss"));
 }

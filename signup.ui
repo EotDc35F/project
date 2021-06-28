@@ -40,6 +40,18 @@ border-radius:5px;
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
+      <widget class="QLabel" name="time">
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
       <spacer name="horizontalSpacer">
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
@@ -166,10 +178,13 @@ border-radius:5px;
          <widget class="QLabel" name="label_3">
           <property name="font">
            <font>
-            <pointsize>9</pointsize>
+            <pointsize>10</pointsize>
             <weight>75</weight>
             <bold>true</bold>
            </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color:rgb(152, 152, 152)</string>
           </property>
           <property name="text">
            <string>Password</string>
@@ -193,10 +208,13 @@ border-radius:5px;
          <widget class="QLabel" name="label_2">
           <property name="font">
            <font>
-            <pointsize>9</pointsize>
+            <pointsize>10</pointsize>
             <weight>75</weight>
             <bold>true</bold>
            </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color:rgb(152, 152, 152)</string>
           </property>
           <property name="text">
            <string>Username</string>
@@ -246,10 +264,13 @@ border-radius:5px;
          <widget class="QLabel" name="label_4">
           <property name="font">
            <font>
-            <pointsize>9</pointsize>
+            <pointsize>10</pointsize>
             <weight>75</weight>
             <bold>true</bold>
            </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color:rgb(152, 152, 152)</string>
           </property>
           <property name="text">
            <string>Confirm Password</string>

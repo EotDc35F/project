@@ -7,6 +7,9 @@ reserve::reserve(QWidget *parent,QList<mv>*mv, class home*hm) :
 {
     ui->setupUi(this);
     this->movies=mv;
+    timer_1s = new QTimer(this);
+    connect(timer_1s, SIGNAL(timeout()), this, SLOT(UpdateTime()));
+    timer_1s->start(100);
     load_table();
     this->home=hm;
 }
@@ -106,4 +109,9 @@ void reserve::on_reserve_2_clicked()
             QMessageBox::critical(this,"Reserve","You can not book this movie with this amount.\nCheck the valence of the movie and try again");
 
 
+}
+
+void reserve::UpdateTime()
+{
+   ui->time->setText(QTime::currentTime().toString("hh:mm:ss"));
 }

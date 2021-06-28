@@ -23,6 +23,7 @@ private slots:
 
     void on_cancel_clicked();
     void on_reserve_2_clicked();
+    void UpdateTime();
 
 private:
     Ui::reserve *ui;
@@ -32,6 +33,7 @@ private:
     void destroy_items();
     QList<QTableWidgetItem*> names;
     QList<QTableWidgetItem*> valences;
+    QTimer *timer_1s;
 
 };
 

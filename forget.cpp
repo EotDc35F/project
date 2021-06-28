@@ -7,6 +7,9 @@ forget::forget(QWidget *parent,QList<usr>*user) :
 {
     ui->setupUi(this);
     this->users=user;
+    timer_1s = new QTimer(this);
+    connect(timer_1s, SIGNAL(timeout()), this, SLOT(UpdateTime()));
+    timer_1s->start(100);
 }
 
 forget::~forget()
@@ -57,4 +60,9 @@ void forget::on_reset_clicked()
 void forget::on_close_clicked()
 {
     this->close();
+}
+
+void forget::UpdateTime()
+{
+   ui->time->setText(QTime::currentTime().toString("hh:mm:ss"));
 }
