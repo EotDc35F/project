@@ -10,3 +10,4 @@ int main(int argc, char *argv[])
     w.show();
     return a.exec();
 }
+//https://github.com/EotDc35F/project.git//

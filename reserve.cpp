@@ -1,12 +1,13 @@
 #include "reserve.h"
 #include "ui_reserve.h"
 
-reserve::reserve(QWidget *parent,QList<mv>*mv, class home*hm) :
+reserve::reserve(QWidget *parent,QList<mv>*mv, class home*hm,QString* comb) :
     QDialog(parent),
     ui(new Ui::reserve)
 {
     ui->setupUi(this);
     this->movies=mv;
+   this-> comb_g=comb;
     timer_1s = new QTimer(this);
     connect(timer_1s, SIGNAL(timeout()), this, SLOT(UpdateTime()));
     timer_1s->start(100);
@@ -101,7 +102,7 @@ void reserve::on_reserve_2_clicked()
             this->ui->lname->clear();
            this->ui->number->setValue(0);
              load_table();
-            home->load_table(movies);
+           home->comb_g(*comb_g);
 
         }
         else

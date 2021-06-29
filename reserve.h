@@ -13,7 +13,7 @@ class reserve : public QDialog
     Q_OBJECT
 
 public:
-    explicit reserve(QWidget *parent = nullptr,QList<mv>*movies=0,home * home=nullptr);
+    explicit reserve(QWidget *parent = nullptr,QList<mv>*movies=0,home * home=nullptr,QString *comb_g=nullptr);
     ~reserve();
 
 private slots:
@@ -29,6 +29,7 @@ private:
     Ui::reserve *ui;
     QList<mv>*movies;
     home * home;
+    QString *comb_g;
     void load_table();
     void destroy_items();
     QList<QTableWidgetItem*> names;
